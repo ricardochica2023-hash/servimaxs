@@ -1,0 +1,25 @@
+
+[
+    {
+        "titulo": "Desarrollo de páginas web",
+        "descripcion": "Diseñamos páginas web profesionales, modernas y adaptables para tu negocio.",
+        "imagen": "assets/img/desarrollo-web.jpg",
+        "enlace": "#contacto",
+        "boton": "Solicitar servicio"
+    },
+    {
+        "titulo": "Diseño y desarrollo de software",
+        "descripcion": "Creamos soluciones digitales que ayudan a optimizar los procesos de tu empresa.",
+        "imagen": "assets/img/software.jpg",
+        "enlace": "#contacto",
+        "boton": "Conocer más"
+    },
+    {
+        "titulo": "Mantenimiento web",
+        "descripcion": "Mejoramos, actualizamos y mantenemos tu sitio web en funcionamiento.",
+        "imagen": "assets/img/mantenimiento.jpg",
+        "enlace": "#contacto",
+        
+        "boton": "Solicitar información"
+    }
+]

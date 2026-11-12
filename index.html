@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- SEO Y METADATOS OFICIALES -->
+  <title>Desarrollo Web y Software para Empresas | Servi Maxs</title>
+  <meta name="description" content="En Servi Maxs desarrollamos páginas web, tiendas virtuales, sistemas administrativos y soluciones digitales con tecnología que impulsa tus ideas.">
+  <meta name="keywords" content="Servi Maxs, Desarrollo de páginas web, Desarrollo de software, Diseño web para empresas, Creación de tiendas virtuales, Sistemas de inventario, Automatización empresarial, Colombia">
+  <meta name="author" content="Ricardo Andrés Chica Valencia - Servi Maxs">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Desarrollo Web y Software para Empresas | Servi Maxs">
+  <meta property="og:description" content="Servi Maxs: Tecnología que impulsa tus ideas. Páginas web profesionales, software a medida, e-commerce y automatización.">
+  <meta property="og:image" content="assets/logo-symbol.png">
+  <meta property="og:site_name" content="Servi Maxs">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon Oficial -->
+  <link rel="icon" type="image/png" href="assets/logo-symbol.png">
+
+  <!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Estilos Corporativos Oficiales -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- JSON-LD Datos Estructurados Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Servi Maxs",
+    "image": "assets/logo-symbol.png",
+    "description": "Desarrollo de páginas web, software administrativo, tiendas virtuales y soluciones digitales para empresas y emprendedores.",
+    "priceRange": "$450.000 COP - $950.000 COP+",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "CO"
+    },
+    "slogan": "Tecnología que impulsa tus ideas.",
+    "url": "https://tudominio.com"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       AMBIENTE Y EFECTOS LUMINOSOS (HALOS AZUL TECNOLÓGICO Y DESTELLOS CORAL)
+       ========================================================================== -->
+  <div class="ambient-glow-wrapper" aria-hidden="true">
+    <div class="ambient-orb orb-top-center"></div>
+    <div class="ambient-orb orb-mid-left"></div>
+    <div class="ambient-orb orb-mid-right"></div>
+    <div class="ambient-orb orb-bottom-center"></div>
+  </div>
+  <div class="cyber-grid-overlay" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       TICKER SUPERIOR PUBLICITARIO / ESLÓGANES
+       ========================================================================== -->
+  
+  <!-- ==========================================================================
+       BARRA DE NAVEGACIÓN (NAVBAR) CON EL LOGOTIPO OFICIAL
+       ========================================================================== -->
+  <header class="header-nav">
+    <div class="container nav-container">
+      
+      <!-- Logotipo oficial con squircle e isotipo provisto -->
+      <a href="#inicio" class="brand-logo" aria-label="Servi Maxs Inicio">
+        <div class="brand-badge-squircle">
+          <img src="assets/logo-symbol.png" alt="Servi Maxs Logotipo Oficial" width="38" height="38">
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">Servi<span class="brand-alcance">Maxs</span></div>
+          <div class="brand-tagline">
+            <span class="dot-coral"></span> Soluciones Digitales
+          </div>
+        </div>
+      </a>
+
+      <!-- Menú horizontal centrado -->
+      <nav class="nav-menu" aria-label="Menú principal de escritorio">
+        <a href="#inicio" class="nav-link active">Inicio</a>
+        <a href="#soluciones" class="nav-link">Soluciones</a>
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#beneficios" class="nav-link">Beneficios</a>
+        <a href="#portafolio" class="nav-link">Portafolio</a>
+        <a href="#proceso" class="nav-link">Proceso</a>
+        <a href="#planes" class="nav-link">Planes</a>
+        <a href="#nosotros" class="nav-link">Nosotros</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <!-- Botón de cotización en el extremo derecho en azul eléctrico -->
+      <div class="nav-cta-desktop">
+        <a href="#contacto" class="btn btn-primary btn-sm">
+          <i class="fa-solid fa-paper-plane"></i> Cotizar Proyecto
+        </a>
+      </div>
+
+      <!-- Botón Hamburguesa Móvil -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       DRAWER MÓVIL LATERAL
+       ========================================================================== -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-links">
+      <a href="#inicio" class="mobile-drawer-link">
+        <span><i class="fa-solid fa-house"></i> Inicio</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+      <a href="#soluciones" class="mobile-drawer-link">
+        <span><i class="fa-solid fa-microchip"></i> Problemas vs Soluciones</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+      <a href="#servicios" class="mobile-drawer-link">
+        <span><i class="fa-solid fa-cubes"></i> Nuestros Servicios</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+      <a href="#beneficios" class="mobile-drawer-link">
+        <span><i class="fa-solid fa-wand-magic-sparkles"></i> ¿Por qué elegirnos?</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+      <a href="#portafolio" class="mobile-drawer-link">
+        <span><i class="fa-solid fa-laptop-code"></i> Demostraciones / Proyectos</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+      <a href="#proceso" class="mobile-drawer-link">
+        <span><i class="fa-solid fa-bars-progress"></i> Proceso de Trabajo</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+      <a href="#planes" class="mobile-drawer-link">
+        <span><i class="fa-solid fa-tags"></i> Planes y Precios</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+      <a href="#nosotros" class="mobile-drawer-link">
+        <span><i class="fa-solid fa-building"></i> Sobre Servi Maxs</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+      <a href="#faq" class="mobile-drawer-link">
+        <span><i class="fa-solid fa-circle-question"></i> Preguntas Frecuentes</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+    </div>
+
+    <div class="mobile-drawer-actions">
+      <a href="#contacto" class="btn btn-primary btn-block">
+        <i class="fa-solid fa-file-invoice-dollar"></i> Solicitar Cotización
+      </a>
+      <a href="https://wa.me/573113754530?text=%C2%A1Hola!%20Estoy%20interesado%20en%20los%20servicios%20de%20Servi%20Alcance.%20Quisiera%20recibir%20informaci%C3%B3n%20sobre%20sus%20soluciones%20digitales%20y%20conocer%20c%C3%B3mo%20pueden%20ayudarme%20con%20mi%20negocio.%20%C2%BFPodr%C3%ADan%20brindarme%20asesor%C3%ADa%20y%20una%20cotizaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-block">
+        <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp Directo
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SECCIÓN 1. HERO (PRESENTACIÓN TECNOLÓGICA CON BRANDING OFICIAL)
+       ========================================================================== -->
+  <section class="hero-section" id="inicio">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Texto del Hero -->
+        <div class="hero-content reveal">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span>Tecnología que impulsa tus ideas</span>
+          </div>
+
+          <h1 class="hero-title">
+            Impulsa tu negocio con <span class="gradient-text">soluciones digitales</span> a tu alcance.
+          </h1>
+
+          <p class="hero-subtitle">
+            En <strong>Servi Maxs</strong> transformamos tus ideas en soluciones tecnológicas de alto impacto. Desarrollamos páginas web, sistemas administrativos y herramientas de automatización que ayudan a emprendedores y empresas a optimizar sus procesos y liderar el mercado digital.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contacto" class="btn btn-primary">
+              <i class="fa-solid fa-rocket"></i> Solicitar cotización
+            </a>
+            <a href="#servicios" class="btn btn-secondary">
+              <i class="fa-solid fa-list-check"></i> Conocer servicios
+            </a>
+          </div>
+
+          <div class="hero-complementary">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Soluciones digitales con atención personalizada, código limpio y acompañamiento cercano durante todo el desarrollo.</span>
+          </div>
+        </div>
+
+        <!-- Ilustración / Tarjeta 3D con banner oficial e iluminación azul tecnológica -->
+        <div class="hero-visual-card reveal">
+          <div class="hero-card-header">
+            <div class="window-dots">
+              <span class="window-dot dot-red"></span>
+              <span class="window-dot dot-yellow"></span>
+              <span class="window-dot dot-green"></span>
+            </div>
+            <div class="tech-badge-pill">
+              <i class="fa-solid fa-network-wired"></i> Software &amp; Cloud Ready
+            </div>
+          </div>
+
+          <!-- Exhibición del Logo Oficial en la cabecera del visor -->
+          <div style="background: rgba(3, 7, 14, 0.85); border-radius: 12px; padding: 0.85rem 1rem; margin-bottom: 1rem; border: 1px solid rgba(59, 130, 246, 0.25); display: flex; align-items: center; justify-content: center;">
+            <a href="#inicio" class="brand-logo" aria-label="Servi Maxs Inicio">
+        <div class="brand-badge-squircle">
+          <img src="assets/logo-symbol.png" alt="Servi Maxs Logotipo Oficial" width="38" height="38">
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">Servi<span class="brand-alcance">Maxs</span></div>
+          <div class="brand-tagline">
+            <span class="dot-coral"></span> Soluciones Digitales
+          </div>
+        </div>
+      </a>
+          </div>
+
+          <div class="showcase-mockup-screen">
+            <div class="mockup-header-bar">
+              <i class="fa-solid fa-lock" style="font-size:0.7rem; color:var(--blue-light);"></i>
+              <span>servimaxs.com/soluciones-digitales</span>
+            </div>
+
+            <div class="mockup-grid">
+              <div class="mockup-stat-card">
+                <div>
+                  <div class="stat-label">Presencia Digital</div>
+                  <div class="stat-value">Responsive Total</div>
+                </div>
+                <span class="stat-badge green">Celulares &bull; PC</span>
+              </div>
+
+              <div class="mockup-stat-card">
+                <div>
+                  <div class="stat-label">Sistemas &amp; Procesos</div>
+                  <div class="stat-value">100% Organizado</div>
+                </div>
+                <span class="stat-badge blue">Sin errores</span>
+              </div>
+
+              <div class="mockup-stat-card">
+                <div>
+                  <div class="stat-label">Velocidad de Carga</div>
+                  <div class="stat-value">&lt; 0.9 Segundos</div>
+                </div>
+                <span class="stat-badge green">Ultra Rápido</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.35rem; padding: 1rem; background: rgba(14, 28, 54, 0.6); border-radius: 10px; border: 1px solid rgba(59, 130, 246, 0.25);">
+              <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.82rem; margin-bottom: 8px;">
+                <span style="color:var(--text-secondary);"><i class="fa-solid fa-chart-pie" style="color:var(--blue-light); margin-right:5px;"></i> Rendimiento &amp; Escalabilidad</span>
+                <span style="color:var(--blue-light); font-weight:800;">99.9% Uptime</span>
+              </div>
+              <div style="width:100%; height:6px; background:rgba(255,255,255,0.08); border-radius:4px; overflow:hidden;">
+                <div style="width:100%; height:100%; background:linear-gradient(90deg, var(--blue-primary), var(--blue-electric), var(--coral-accent)); box-shadow:0 0 10px var(--blue-electric);"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Píldora flotante -->
+          <div class="floating-notif-pill">
+            <i class="fa-solid fa-circle-check" style="color:var(--coral-accent); text-shadow:0 0 8px var(--coral-accent);"></i>
+            <span>¡Tu negocio activo en línea 24/7!</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN 2. PROBLEMAS VS SOLUCIONES (CUADRÍCULA 3 COLUMNAS)
+       ========================================================================== -->
+  <section class="section" id="soluciones">
+    <div class="container">
+      
+      <div class="section-header reveal">
+        <span class="section-tag">Problemas que solucionamos</span>
+        <h2 class="section-title">¿Tu negocio se identifica con alguna de estas situaciones?</h2>
+        <p class="section-description">
+          No vendemos solamente líneas de código. Te entregamos organización, presencia digital de nivel profesional, rapidez de contacto y herramientas construidas para superar tus retos comerciales.
+        </p>
+      </div>
+
+      <div class="problems-solutions-grid">
+        
+        <!-- Tarjeta 1 -->
+        <div class="comparison-card reveal">
+          <div class="card-problem">
+            <div class="icon-cross"><i class="fa-solid fa-xmark"></i></div>
+            <div>
+              <span class="problem-label">Problema Común</span>
+              <div class="problem-text">No tiene página web o no aparece en búsquedas</div>
+            </div>
+          </div>
+          <div class="card-solution">
+            <div class="icon-check"><i class="fa-solid fa-check"></i></div>
+            <div>
+              <span class="solution-label">Solución Servi Maxs</span>
+              <div class="solution-text">Desarrollo de sitios web profesionales y modernos</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="comparison-card reveal">
+          <div class="card-problem">
+            <div class="icon-cross"><i class="fa-solid fa-xmark"></i></div>
+            <div>
+              <span class="problem-label">Problema Común</span>
+              <div class="problem-text">Sus clientes no encuentran información de sus servicios</div>
+            </div>
+          </div>
+          <div class="card-solution">
+            <div class="icon-check"><i class="fa-solid fa-check"></i></div>
+            <div>
+              <span class="solution-label">Solución Servi Maxs</span>
+              <div class="solution-text">Página clara con información organizada y contacto en 1 clic</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="comparison-card reveal">
+          <div class="card-problem">
+            <div class="icon-cross"><i class="fa-solid fa-xmark"></i></div>
+            <div>
+              <span class="problem-label">Problema Común</span>
+              <div class="problem-text">Recibe pedidos desorganizados por redes o chat</div>
+            </div>
+          </div>
+          <div class="card-solution">
+            <div class="icon-check"><i class="fa-solid fa-check"></i></div>
+            <div>
+              <span class="solution-label">Solución Servi Maxs</span>
+              <div class="solution-text">Sistema de gestión y catálogos digitales interactivos</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="comparison-card reveal">
+          <div class="card-problem">
+            <div class="icon-cross"><i class="fa-solid fa-xmark"></i></div>
+            <div>
+              <span class="problem-label">Problema Común</span>
+              <div class="problem-text">Controla inventarios y ventas manualmente en libretas o Excel</div>
+            </div>
+          </div>
+          <div class="card-solution">
+            <div class="icon-check"><i class="fa-solid fa-check"></i></div>
+            <div>
+              <span class="solution-label">Solución Servi Maxs</span>
+              <div class="solution-text">Sistema de inventario y facturación cloud seguro</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 5 -->
+        <div class="comparison-card reveal">
+          <div class="card-problem">
+            <div class="icon-cross"><i class="fa-solid fa-xmark"></i></div>
+            <div>
+              <span class="problem-label">Problema Común</span>
+              <div class="problem-text">Tiene procesos repetitivos que quitan tiempo valioso</div>
+            </div>
+          </div>
+          <div class="card-solution">
+            <div class="icon-check"><i class="fa-solid fa-check"></i></div>
+            <div>
+              <span class="solution-label">Solución Servi Maxs</span>
+              <div class="solution-text">Automatización inteligente de tareas y flujos de trabajo</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 6 -->
+        <div class="comparison-card reveal">
+          <div class="card-problem">
+            <div class="icon-cross"><i class="fa-solid fa-xmark"></i></div>
+            <div>
+              <span class="problem-label">Problema Común</span>
+              <div class="problem-text">No tiene presencia digital profesional para transmitir confianza</div>
+            </div>
+          </div>
+          <div class="card-solution">
+            <div class="icon-check"><i class="fa-solid fa-check"></i></div>
+            <div>
+              <span class="solution-label">Solución Servi Maxs</span>
+              <div class="solution-text">Diseño digital prémium que convierte visitantes en clientes</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN 3. NUESTROS SERVICIOS (TARJETAS OSCURAS CON ICONOS AZULES)
+       ========================================================================== -->
+  <section class="section section-alt" id="servicios">
+    <div class="container">
+      
+      <div class="section-header reveal">
+        <span class="section-tag">Nuestros Servicios</span>
+        <h2 class="section-title">Soluciones tecnológicas para llevar tu negocio más lejos.</h2>
+        <p class="section-description">
+          Ofrecemos servicios de desarrollo de software y soluciones digitales adaptadas a las necesidades de cada proyecto. Nuestro propósito es ayudarte a aprovechar la tecnología para mejorar la presentación, organización y funcionamiento de tu negocio.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        
+        <!-- Servicio A: Diseño y desarrollo web -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3 class="service-title">Diseño y desarrollo web</h3>
+          <p class="service-text">
+            Creamos páginas web modernas, profesionales y adaptables a dispositivos móviles para que tus clientes conozcan tu negocio, encuentren tus servicios y puedan contactarte fácilmente.
+          </p>
+          <ul class="service-feature-list">
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Páginas corporativas</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Landing pages comerciales</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Catálogos digitales</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Sitios web informativos</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Diseño 100% responsive</li>
+          </ul>
+          <button class="btn-card-action" data-select-service="Diseño y desarrollo web">
+            Cotizar este servicio <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- Servicio B: Desarrollo de sistemas y software -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <h3 class="service-title">Desarrollo de sistemas y software</h3>
+          <p class="service-text">
+            Desarrollamos herramientas digitales para organizar información y facilitar las actividades de tu empresa, eliminando la duplicidad y las pérdidas de tiempo.
+          </p>
+          <ul class="service-feature-list">
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Sistemas de inventario</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Gestión de clientes (CRM)</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Control y registro de ventas</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Paneles administrativos seguros</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Sistemas totalmente personalizados</li>
+          </ul>
+          <button class="btn-card-action" data-select-service="Desarrollo de sistemas y software">
+            Cotizar este servicio <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- Servicio C: Tiendas virtuales -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <h3 class="service-title">Tiendas virtuales (E-commerce)</h3>
+          <p class="service-text">
+            Creamos espacios digitales para presentar productos y facilitar los procesos de compra y consulta de tus clientes las 24 horas del día.
+          </p>
+          <ul class="service-feature-list">
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Catálogo visual de productos</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Organización por categorías</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Carrito de compras moderno</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Formularios rápidos de pedido</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Integración de medios de pago</li>
+          </ul>
+          <button class="btn-card-action" data-select-service="Tiendas virtuales">
+            Cotizar este servicio <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- Servicio D: Automatización e inteligencia artificial -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3 class="service-title">Automatización e IA</h3>
+          <p class="service-text">
+            Implementamos soluciones tecnológicas para reducir tareas repetitivas y facilitar determinados procesos empresariales críticos.
+          </p>
+          <ul class="service-feature-list">
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Automatización de tareas rutinarias</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Organización de información y datos</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Generación de reportes automáticos</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Flujos de trabajo eficientes</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Herramientas de asistencia basadas en IA</li>
+          </ul>
+          <button class="btn-card-action" data-select-service="Automatización e IA">
+            Cotizar este servicio <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- Servicio E: Mantenimiento y soporte web -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+          <h3 class="service-title">Mantenimiento y soporte web</h3>
+          <p class="service-text">
+            Te ayudamos a mantener tus soluciones digitales actualizadas, seguras y funcionando correctamente para que nunca detengas tu operación.
+          </p>
+          <ul class="service-feature-list">
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Actualizaciones periódicas</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Corrección ágil de errores</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Mejoras continuas de contenido</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Revisión técnica y de seguridad</li>
+            <li class="service-feature-item"><i class="fa-solid fa-check"></i> Soporte según el plan contratado</li>
+          </ul>
+          <button class="btn-card-action" data-select-service="Mantenimiento y soporte web">
+            Cotizar este servicio <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- Tarjeta especial: Asesoría gratuita en azul medianoche y coral -->
+        <div class="service-card reveal" style="background: linear-gradient(135deg, rgba(14, 32, 64, 0.85), rgba(7, 16, 34, 0.85)); border-color: var(--blue-electric); box-shadow: var(--glow-blue-md);">
+          <div class="service-icon-box" style="background: rgba(250, 93, 80, 0.22); color: var(--coral-bright); border-color: rgba(250, 93, 80, 0.5);">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <h3 class="service-title">¿No sabes cuál necesitas?</h3>
+          <p class="service-text">
+            Analizamos la situación actual de tu negocio sin ningún costo y te recomendamos la solución más efectiva para tu presupuesto y metas.
+          </p>
+          <div style="margin-top:auto;">
+            <a href="#contacto" class="btn btn-coral btn-block">
+              <i class="fa-solid fa-headset"></i> Hablar con un asesor
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN 4. ¿POR QUÉ ELEGIR Servi Maxs? (BENEFICIOS)
+       ========================================================================== -->
+  <section class="section" id="beneficios">
+    <div class="container">
+      
+      <div class="section-header reveal">
+        <span class="section-tag">Nuestra Ventaja</span>
+        <h2 class="section-title">Tecnología pensada para las necesidades de tu negocio.</h2>
+        <p class="section-description">
+          Sabemos que cada negocio tiene objetivos, necesidades y desafíos diferentes. Por eso buscamos ofrecer soluciones digitales que se adapten a cada proyecto, priorizando la funcionalidad, la facilidad de uso y una comunicación clara.
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+        
+        <div class="benefit-card reveal">
+          <div class="benefit-num">01. ADAPTADO A TI</div>
+          <h3 class="benefit-title">Soluciones personalizadas</h3>
+          <p class="benefit-desc">Desarrollos adaptados a los objetivos particulares del cliente, sin plantillas rígidas ni funciones innecesarias.</p>
+        </div>
+
+        <div class="benefit-card reveal">
+          <div class="benefit-num">02. ESTÉTICA &amp; VANGUARDIA</div>
+          <h3 class="benefit-title">Diseño moderno</h3>
+          <p class="benefit-desc">Interfaces visuales atractivas, organizadas y pensadas para transmitir confianza instantánea a tus visitantes.</p>
+        </div>
+
+        <div class="benefit-card reveal">
+          <div class="benefit-num">03. MOBILE FIRST</div>
+          <h3 class="benefit-title">Adaptabilidad total</h3>
+          <p class="benefit-desc">Sitios web y sistemas 100% optimizados para celulares, tabletas y computadores, garantizando navegación fluida.</p>
+        </div>
+
+        <div class="benefit-card reveal">
+          <div class="benefit-num">04. TRANSPARENCIA</div>
+          <h3 class="benefit-title">Comunicación directa</h3>
+          <p class="benefit-desc">Acompañamiento permanente durante el desarrollo. Sin tecnicismos confusos, siempre con respuestas claras.</p>
+        </div>
+
+        <div class="benefit-card reveal">
+          <div class="benefit-num">05. RESULTADOS REALES</div>
+          <h3 class="benefit-title">Enfoque funcional</h3>
+          <p class="benefit-desc">Herramientas diseñadas para resolver necesidades reales de tu día a día y facilitar el contacto con nuevos clientes.</p>
+        </div>
+
+        <div class="benefit-card reveal">
+          <div class="benefit-num">06. RESPALDO CONTINUO</div>
+          <h3 class="benefit-title">Acompañamiento</h3>
+          <p class="benefit-desc">Orientación completa sobre el uso y mantenimiento de las soluciones entregadas para que nunca te sientas solo.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN 5. NUESTRO PORTAFOLIO (DEMOSTRACIONES Y PROYECTOS)
+       ========================================================================== -->
+  <section class="section section-alt" id="portafolio">
+    <div class="container">
+      
+      <div class="section-header reveal">
+        <span class="section-tag">Demostraciones y Proyectos</span>
+        <h2 class="section-title">Ideas que se convierten en soluciones digitales.</h2>
+        <p class="section-description">
+          Conoce algunos ejemplos de las soluciones que podemos desarrollar para diferentes tipos de negocios y necesidades empresariales. Cada proyecto busca combinar diseño, funcionalidad y una experiencia de usuario sencilla.
+        </p>
+      </div>
+
+      <!-- Filtros de Categoría -->
+      <div class="portfolio-filters reveal">
+        <button class="filter-btn active" data-filter="all">Todas las soluciones</button>
+        <button class="filter-btn" data-filter="web">Páginas Web</button>
+        <button class="filter-btn" data-filter="sistemas">Sistemas &amp; Software</button>
+        <button class="filter-btn" data-filter="tiendas">Tiendas Virtuales</button>
+        <button class="filter-btn" data-filter="personalizadas">Soluciones a Medida</button>
+      </div>
+
+      <!-- Grid de Proyectos -->
+      <div class="portfolio-grid">
+        
+        <!-- Proyecto 1: Restaurante / Servicios -->
+        <div class="project-card reveal" data-category="web">
+          <div class="project-mockup-wrapper">
+            <div class="project-demo-ui">
+              <span class="demo-header-tag"><i class="fa-solid fa-utensils"></i> Demo Gastronómica</span>
+              <div style="font-size:0.9rem; font-weight:800; margin-top:4px;">Restaurante "Sabor &amp; Carbón"</div>
+              <div style="font-size:0.75rem; color:var(--text-secondary);">Menú digital interactivo con pedidos directos</div>
+              <div class="demo-content-bars">
+                <div class="demo-bar long"></div>
+                <div class="demo-bar medium"></div>
+                <div class="demo-bar short"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category">Páginas Web</span>
+            <h3 class="project-title">Portal Web &amp; Menú para Restaurante</h3>
+            <p class="project-desc">Sitio web diseñado para presentar carta de comidas, galería de instalaciones y botón de reserva directa vía WhatsApp.</p>
+            <div class="project-tags">
+              <span class="tech-tag">Diseño Responsive</span>
+              <span class="tech-tag">Menú Digital</span>
+              <span class="tech-tag">WhatsApp API</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn-demo-view" data-demo="restaurante">
+                <i class="fa-solid fa-eye"></i> Ver detalles de demo
+              </button>
+              <button class="btn btn-primary btn-sm" data-select-service="Diseño y desarrollo web">Cotizar similar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 2: Inventario y Administración -->
+        <div class="project-card reveal" data-category="sistemas">
+          <div class="project-mockup-wrapper">
+            <div class="project-demo-ui">
+              <span class="demo-header-tag"><i class="fa-solid fa-boxes-stacked"></i> Demo Sistema Cloud</span>
+              <div style="font-size:0.9rem; font-weight:800; margin-top:4px;">AlcanceERP Lite - Control de Stock</div>
+              <div style="font-size:0.75rem; color:var(--text-secondary);">Módulo de entradas, salidas y alertas de stock</div>
+              <div class="demo-content-bars">
+                <div class="demo-bar short"></div>
+                <div class="demo-bar long"></div>
+                <div class="demo-bar medium"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category">Sistemas y Software</span>
+            <h3 class="project-title">Sistema de Inventario &amp; Ventas</h3>
+            <p class="project-desc">Herramienta administrativa creada para controlar existencias de almacén, registrar ventas en tiempo real y emitir reportes.</p>
+            <div class="project-tags">
+              <span class="tech-tag">Panel Administrativo</span>
+              <span class="tech-tag">Control de Stock</span>
+              <span class="tech-tag">Reportes</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn-demo-view" data-demo="inventario">
+                <i class="fa-solid fa-eye"></i> Ver detalles de demo
+              </button>
+              <button class="btn btn-primary btn-sm" data-select-service="Desarrollo de sistemas y software">Cotizar similar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 3: Tienda Virtual / Catálogo -->
+        <div class="project-card reveal" data-category="tiendas">
+          <div class="project-mockup-wrapper">
+            <div class="project-demo-ui">
+              <span class="demo-header-tag"><i class="fa-solid fa-bag-shopping"></i> Demo E-Commerce</span>
+              <div style="font-size:0.9rem; font-weight:800; margin-top:4px;">Boutique Urbana - Tienda Online</div>
+              <div style="font-size:0.75rem; color:var(--text-secondary);">Catálogo con filtros por categoría y carrito</div>
+              <div class="demo-content-bars">
+                <div class="demo-bar medium"></div>
+                <div class="demo-bar short"></div>
+                <div class="demo-bar long"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category">Tiendas Virtuales</span>
+            <h3 class="project-title">Catálogo y Tienda Digital</h3>
+            <p class="project-desc">E-commerce adaptable a teléfonos móviles con galería de productos, gestión de variantes y checkout optimizado.</p>
+            <div class="project-tags">
+              <span class="tech-tag">Carrito de compras</span>
+              <span class="tech-tag">Pasarela de pago</span>
+              <span class="tech-tag">Mobile Shopping</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn-demo-view" data-demo="tienda">
+                <i class="fa-solid fa-eye"></i> Ver detalles de demo
+              </button>
+              <button class="btn btn-primary btn-sm" data-select-service="Tiendas virtuales">Cotizar similar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 4: Soluciones personalizadas -->
+        <div class="project-card reveal" data-category="personalizadas">
+          <div class="project-mockup-wrapper">
+            <div class="project-demo-ui">
+              <span class="demo-header-tag"><i class="fa-solid fa-microchip"></i> Demo Automatización IA</span>
+              <div style="font-size:0.9rem; font-weight:800; margin-top:4px;">Panel SaaS &amp; Automatización IA</div>
+              <div style="font-size:0.75rem; color:var(--text-secondary);">Flujo automático de prospectos y reportes inteligentes</div>
+              <div class="demo-content-bars">
+                <div class="demo-bar long"></div>
+                <div class="demo-bar medium"></div>
+                <div class="demo-bar short"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category">Soluciones Personalizadas</span>
+            <h3 class="project-title">Panel de Control &amp; Automatización</h3>
+            <p class="project-desc">Dashboard a medida para sincronizar clientes, respuestas automatizadas y métricas clave de rendimiento.</p>
+            <div class="project-tags">
+              <span class="tech-tag">Automatización</span>
+              <span class="tech-tag">Flujos IA</span>
+              <span class="tech-tag">Integraciones</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn-demo-view" data-demo="automatizacion">
+                <i class="fa-solid fa-eye"></i> Ver detalles de demo
+              </button>
+              <button class="btn btn-primary btn-sm" data-select-service="Automatización e IA">Cotizar similar</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="portfolio-disclaimer">
+        <i class="fa-solid fa-circle-info" style="color:var(--blue-light);"></i>
+        <span><strong>Transparencia Servi Maxs:</strong> Los proyectos anteriores corresponden a demostraciones funcionales y prototipos propios para exhibir nuestras capacidades técnicas.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN 6. NUESTRO PROCESO DE TRABAJO (5 PASOS)
+       ========================================================================== -->
+  <section class="section" id="proceso">
+    <div class="container">
+      
+      <div class="section-header reveal">
+        <span class="section-tag">Metodología Clara</span>
+        <h2 class="section-title">De tu idea a una solución digital.</h2>
+        <p class="section-description">
+          Un proceso transparente, organizado y sin sorpresas. Así es como convertimos tus requerimientos en una solución terminada y lista para operar.
+        </p>
+      </div>
+
+      <div class="process-timeline">
+        
+        <div class="process-step-card reveal">
+          <div class="step-number">01</div>
+          <h3 class="step-title">Escuchamos tu idea</h3>
+          <p class="step-desc">Conocemos tu negocio, tus necesidades puntuales y los objetivos comerciales que deseas alcanzar.</p>
+        </div>
+
+        <div class="process-step-card reveal">
+          <div class="step-number">02</div>
+          <h3 class="step-title">Diseñamos propuesta</h3>
+          <p class="step-desc">Definimos la estructura visual, las funcionalidades requeridas y el alcance exacto del proyecto.</p>
+        </div>
+
+        <div class="process-step-card reveal">
+          <div class="step-number">03</div>
+          <h3 class="step-title">Desarrollamos</h3>
+          <p class="step-desc">Construimos la solución con código limpio y revisamos minuciosamente su funcionamiento en celulares y PC.</p>
+        </div>
+
+        <div class="process-step-card reveal">
+          <div class="step-number">04</div>
+          <h3 class="step-title">Revisamos y ajustamos</h3>
+          <p class="step-desc">Validamos contigo los detalles acordados y realizamos los ajustes incluidos en la propuesta.</p>
+        </div>
+
+        <div class="process-step-card reveal">
+          <div class="step-number">05</div>
+          <h3 class="step-title">Entregamos tu web</h3>
+          <p class="step-desc">Publicamos la solución en Internet, te explicamos cómo utilizarla y te brindamos soporte continuo.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN 7. NOSOTROS (MISIÓN, VISIÓN, VALORES, AUDIENCIA)
+       ========================================================================== -->
+  <section class="section section-alt" id="nosotros">
+    <div class="container">
+      
+      <div class="about-hero-box reveal">
+        <span class="section-tag" style="background:rgba(37, 99, 235, 0.25); color:var(--blue-light); margin-bottom:1rem;">Identidad Corporativa</span>
+        <h2 class="about-intro-title">Somos Servi Maxs.</h2>
+        <p class="about-intro-text">
+          Servi Maxs nace con el propósito de <strong>acercar la tecnología a emprendedores, profesionales y empresas</strong> que buscan aprovechar las oportunidades del mundo digital.<br><br>
+          Nos especializamos en el desarrollo de páginas web, sistemas de información y soluciones tecnológicas personalizadas. Creemos firmemente que la tecnología debe ser una herramienta para facilitar procesos, mejorar la comunicación y ayudar a los negocios a alcanzar sus metas con eficiencia y confianza.
+        </p>
+      </div>
+
+      <!-- Misión y Visión -->
+      <div class="mv-grid">
+        <div class="mv-card reveal">
+          <div class="mv-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3 class="mv-title">Nuestra Misión</h3>
+          <p class="mv-text">
+            Ofrecer soluciones tecnológicas y servicios de desarrollo de software que permitan a emprendedores y empresas fortalecer su presencia digital, optimizar procesos y aprovechar al máximo las herramientas tecnológicas del mercado actual.
+          </p>
+        </div>
+
+        <div class="mv-card reveal">
+          <div class="mv-icon"><i class="fa-solid fa-compass"></i></div>
+          <h3 class="mv-title">Nuestra Visión</h3>
+          <p class="mv-text">
+            Consolidarnos como una empresa de soluciones digitales reconocida en Colombia e internacionalmente por la calidad de sus desarrollos, la innovación constante y el compromiso genuino con las necesidades de nuestros clientes.
+          </p>
+        </div>
+      </div>
+
+      <!-- Valores -->
+      <div class="values-container reveal">
+        <h3 class="values-title">Valores que guían nuestro trabajo</h3>
+        <div class="values-tags">
+          <span class="value-pill"><i class="fa-solid fa-check"></i> Innovación</span>
+          <span class="value-pill"><i class="fa-solid fa-check"></i> Responsabilidad</span>
+          <span class="value-pill"><i class="fa-solid fa-check"></i> Compromiso</span>
+          <span class="value-pill"><i class="fa-solid fa-check"></i> Transparencia</span>
+          <span class="value-pill"><i class="fa-solid fa-check"></i> Calidad</span>
+          <span class="value-pill"><i class="fa-solid fa-check"></i> Orientación al cliente</span>
+        </div>
+      </div>
+
+      <!-- Público objetivo -->
+      <div class="section-header reveal" style="margin-bottom: 2rem;">
+        <span class="section-tag">¿A quién servimos?</span>
+        <h2 class="section-title">Soluciones diseñadas para cada perfil de negocio</h2>
+      </div>
+
+      <div class="audience-grid">
+        <div class="audience-card reveal">
+          <div class="audience-icon"><i class="fa-solid fa-store"></i></div>
+          <h4 class="audience-title">Emprendedores y Pequeños Negocios</h4>
+          <p class="audience-desc">Comenzar con presencia profesional en Internet, mostrar productos y recibir consultas organizadas.</p>
+        </div>
+
+        <div class="audience-card reveal">
+          <div class="audience-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h4 class="audience-title">Pymes</h4>
+          <p class="audience-desc">Páginas web robustas, sistemas para administrar información y herramientas para ordenar operaciones.</p>
+        </div>
+
+        <div class="audience-card reveal">
+          <div class="audience-icon"><i class="fa-solid fa-user-tie"></i></div>
+          <h4 class="audience-title">Profesionales Independientes</h4>
+          <p class="audience-desc">Abogados, consultores, diseñadores y técnicos que requieren exhibir su portafolio y captar clientes.</p>
+        </div>
+
+        <div class="audience-card reveal">
+          <div class="audience-icon"><i class="fa-solid fa-earth-americas"></i></div>
+          <h4 class="audience-title">Empresas Internacionales</h4>
+          <p class="audience-desc">Organizaciones que buscan un proveedor confiable para desarrollar herramientas digitales a costos competitivos.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN 8. PLANES Y COTIZACIONES
+       ========================================================================== -->
+  <section class="section" id="planes">
+    <div class="container">
+      
+      <div class="section-header reveal">
+        <span class="section-tag">Precios Claros y Accesibles</span>
+        <h2 class="section-title">Planes diseñados para impulsar tu marca.</h2>
+        <p class="section-description">
+          Transparencia desde el primer día. Conoce nuestros paquetes para páginas web o solicita una cotización personalizada para sistemas y software.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        
+        <!-- PLAN BÁSICO -->
+        <div class="pricing-card reveal">
+          <div class="pricing-header">
+            <h3 class="plan-name">Plan Básico</h3>
+            <div class="plan-price">$450.000 <span class="plan-currency">COP</span></div>
+            <p class="plan-target">Para emprendedores que necesitan comenzar a tener presencia digital.</p>
+          </div>
+
+          <ul class="plan-features">
+            <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Página web informativa</li>
+            <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Diseño 100% adaptable a móviles</li>
+            <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Presentación del negocio y servicios</li>
+            <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Información completa de contacto</li>
+            <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Botón directo de WhatsApp</li>
+            <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Alcance y secciones definidas en propuesta</li>
+          </ul>
+
+          <button class="btn btn-secondary btn-block btn-pricing" data-select-service="Plan Básico ($450.000 COP)">
+            Elegir Plan Básico
+          </button>
+        </div>
+
+        <!-- PLAN PROFESIONAL (RECOMENDADO) -->
+        <div class="pricing-card featured reveal">
+          <span class="featured-ribbon">⭐ Paquete Recomendado</span>
+          <div class="pricing-header">
+            <h3 class="plan-name" style="color:var(--blue-light);">Plan Profesional</h3>
+            <div class="plan-price">$650.000 <span class="plan-currency">COP</span></div>
+            <p class="plan-target">Para negocios que quieren presentar sus servicios de forma más completa y atractiva.</p>
+          </div>
+
+          <ul class="plan-features">
+            <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> <strong>Todo lo del plan básico</strong></li>
+            <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> Galería de imágenes / trabajos</li>
+            <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> Secciones adicionales de contenido</li>
+            <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> Formulario de contacto interactivo</li>
+            <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> Ubicación en mapa Google Maps</li>
+            <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> Configuración inicial de publicación</li>
+          </ul>
+
+          <button class="btn btn-primary btn-block btn-pricing" data-select-service="Plan Profesional ($650.000 COP)">
+            <i class="fa-solid fa-fire"></i> Elegir Plan Profesional
+          </button>
+        </div>
+
+        <!-- PLAN EMPRESARIAL -->
+        <div class="pricing-card reveal">
+          <div class="pricing-header">
+            <h3 class="plan-name">Plan Empresarial</h3>
+            <div class="plan-price">$950.000 <span class="plan-currency">COP</span></div>
+            <p class="plan-target">Para empresas que requieren una presentación digital más completa y estratégica.</p>
+          </div>
+
+          <ul class="plan-features">
+            <li class="plan-feature-item"><i class="fa-solid fa-check"></i> <strong>Todo lo del plan profesional</strong></li>
+            <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Secciones y contenido ampliados</li>
+            <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Diseño 100% personalizado</li>
+            <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Catálogo estructurado de productos o servicios</li>
+            <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Funcionalidades especiales acordadas</li>
+            <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Optimización SEO base para Google</li>
+          </ul>
+
+          <button class="btn btn-secondary btn-block btn-pricing" data-select-service="Plan Empresarial ($950.000 COP)">
+            Elegir Plan Empresarial
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Nota comercial transparente -->
+      <div class="commercial-disclaimer-card reveal">
+        <i class="fa-solid fa-handshake-angle"></i>
+        <div class="commercial-disclaimer-text">
+          <strong>Nota comercial para los paquetes:</strong> El dominio, alojamiento (hosting), licencias, integraciones pagas de terceros, creación profesional de contenido fotográfico y funcionalidades especiales deben cotizarse por separado cuando correspondan. Para sistemas administrativos o tiendas virtuales completas, preparamos cotizaciones a medida según el alcance.
+        </div>
+      </div>
+
+      <!-- Banner para sistemas / software personalizado -->
+      <div class="custom-quote-banner reveal">
+        <div class="custom-quote-info">
+          <h3>¿Necesitas un sistema administrativo o tienda virtual?</h3>
+          <p>Los sistemas de inventario, tiendas online y herramientas a medida varían según los procesos de tu negocio. Escríbenos y preparamos una propuesta personalizada.</p>
+        </div>
+        <a href="#contacto" class="btn btn-primary" style="white-space:nowrap;">
+          <i class="fa-solid fa-calculator"></i> Quiero cotizar mi proyecto
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN 9. PREGUNTAS FRECUENTES (FAQ)
+       ========================================================================== -->
+  <section class="section section-alt" id="faq">
+    <div class="container">
+      
+      <div class="section-header reveal">
+        <span class="section-tag">Resolvemos tus dudas</span>
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        <p class="section-description">
+          Todo lo que necesitas saber antes de iniciar tu proyecto con Servi Maxs.
+        </p>
+      </div>
+
+      <div class="faq-container">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item reveal">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>¿Cuánto cuesta desarrollar una página web?</span>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer-pane">
+            <div class="faq-answer-content">
+              El precio depende de las características, el diseño y las funcionalidades que necesite tu negocio. En Servi Maxs contamos con planes iniciales desde $450.000 COP para emprendedores y también desarrollamos propuestas personalizadas para proyectos más amplios.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item reveal">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>¿Cuánto tiempo tarda un proyecto?</span>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer-pane">
+            <div class="faq-answer-content">
+              Depende de su complejidad y de la entrega oportuna de los contenidos (textos, fotos o datos). Una página web sencilla puede desarrollarse en aproximadamente 5 a 8 días hábiles, sujeto al alcance acordado en la propuesta inicial.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item reveal">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>¿Las páginas web funcionan en celulares?</span>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer-pane">
+            <div class="faq-answer-content">
+              Sí, totalmente. Desarrollamos bajo el principio <em>Mobile-First</em>. Tus páginas se adaptarán automáticamente a cualquier tamaño de pantalla (celulares inteligentes, tabletas y computadores de escritorio).
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item reveal">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>¿Puedo solicitar modificaciones?</span>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer-pane">
+            <div class="faq-answer-content">
+              Sí. Los ajustes incluidos se definen con claridad desde el inicio del proyecto en la fase de revisión. Los cambios o nuevas funciones que surjan fuera del alcance original se pueden cotizar por separado.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item reveal">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>¿Puedo contratar desde otra ciudad o país?</span>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer-pane">
+            <div class="faq-answer-content">
+              ¡Por supuesto! Trabajamos 100% de manera virtual con clientes en toda Colombia e internacionalmente, coordinando reuniones por videollamada, entregas organizadas y comunicación constante por medios digitales.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item reveal">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>¿Ofrecen mantenimiento?</span>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer-pane">
+            <div class="faq-answer-content">
+              Sí. Puedes solicitar un plan de mantenimiento continuo o soporte por horas según las necesidades de tu sitio web para actualizaciones de contenido, seguridad y copias de respaldo.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item reveal">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>¿Puedo solicitar un sistema personalizado?</span>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-answer-pane">
+            <div class="faq-answer-content">
+              Sí. Evaluamos detalladamente los procesos, flujos de trabajo y requerimientos específicos de tu empresa para preparar una propuesta de software a la medida exacta de tu operación.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN 10. CONTACTO Y COTIZACIÓN INTELIGENTE
+       ========================================================================== -->
+  <section class="section contact-section" id="contacto">
+    <div class="container">
+      
+      <div class="section-header reveal">
+        <span class="section-tag">Empecemos Hoy</span>
+        <h2 class="section-title">Hagamos realidad tu próximo proyecto digital.</h2>
+        <p class="section-description">
+          Cuéntanos qué necesitas para tu negocio. En <strong>Servi Maxs</strong> queremos conocer tus ideas y ayudarte a encontrar una solución tecnológica adecuada.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Columna Izquierda: Información de contacto y canales directos -->
+        <div class="contact-info-panel reveal">
+          
+          <div class="contact-card-item">
+            <div class="contact-card-icon" style="background:rgba(37, 211, 102, 0.15); color:#25D366; border: 1px solid rgba(37, 211, 102, 0.35);">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div>
+              <div class="contact-card-label">WhatsApp Empresarial</div>
+              <div class="contact-card-value">+57 311 375 4530</div>
+              <a href="https://wa.me/573113754530?text=%C2%A1Hola!%20Estoy%20interesado%20en%20los%20servicios%20de%20Servi%20Alcance.%20Quisiera%20recibir%20informaci%C3%B3n%20sobre%20sus%20soluciones%20digitales%20y%20conocer%20c%C3%B3mo%20pueden%20ayudarme%20con%20mi%20negocio.%20%C2%BFPodr%C3%ADan%20brindarme%20asesor%C3%ADa%20y%20una%20cotizaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" style="color:var(--blue-light); font-size:0.85rem; font-weight:700;">
+                Iniciar conversación directa &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-card-item">
+            <div class="contact-card-icon" style="background:rgba(59, 130, 246, 0.15); color:var(--blue-light); border: 1px solid rgba(59, 130, 246, 0.35);">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+              <div class="contact-card-label">Correo Electrónico Corporativo</div>
+              <div class="contact-card-value">maxsservi@gmail.com</div>
+              <span style="color:var(--text-muted); font-size:0.82rem;">Respuesta en menos de 24 horas</span>
+            </div>
+          </div>
+
+          <div class="contact-card-item">
+            <div class="contact-card-icon" style="background:rgba(255, 255, 255, 0.05); color:#CBD5E1; border: 1px solid rgba(255, 255, 255, 0.1);">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div>
+              <div class="contact-card-label">Horario de Atención</div>
+              <div class="contact-card-value">Lunes a Sábado</div>
+              <span style="color:var(--text-muted); font-size:0.82rem;">8:00 AM – 6:00 PM (Hora Colombia)</span>
+            </div>
+          </div>
+
+          <!-- Canales de Redes Sociales -->
+          <div class="social-links-box">
+            <div class="social-links-title">Síguenos y conéctate con nosotros</div>
+            <div class="social-links-group">
+              <a href="https://web.facebook.com/profile.php?id=61581941066428" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook Servi Maxs">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/servi_maxs?dlrf=dDM4NGdsODhzdW1l&utm_source=qr" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram Servi Maxs">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+               <a href="https://www.tiktok.com/@servi_maxs" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok Servi Maxs">
+                <i class="fa-brands fa-tiktok"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/ricardo-andr%C3%A9s-chica-valencia-6b975a3aa/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Servi Maxs">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://api.whatsapp.com/send/?phone=573113754530&text=%C2%A1Hola%21+Estoy+interesado+en+los+servicios+de+Servi+Maxs.+Quisiera+recibir+informaci%C3%B3n+sobre+sus+soluciones+digitales+y+conocer+c%C3%B3mo+pueden+ayudarme+con+mi+negocio.+%C2%BFPodr%C3%ADan+brindarme+asesor%C3%ADa+y+una+cotizaci%C3%B3n%3F&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp Servi Maxs">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Columna Derecha: Formulario de cotización tecnológico -->
+        <div class="contact-form-container reveal">
+          <h3 class="form-title">Solicitar Asesoría y Cotización</h3>
+          <p class="form-subtitle">Completa el formulario y nos pondremos en contacto para evaluar tu proyecto.</p>
+
+          <form id="quotationForm" novalidate>
+            <div class="form-grid">
+              
+              <!-- Nombre -->
+              <div class="form-group">
+                <label for="clientName" class="form-label">Nombre completo *</label>
+                <input type="text" id="clientName" class="form-input" placeholder="Ej. Carlos Martínez" required>
+              </div>
+
+              <!-- Empresa / Negocio -->
+              <div class="form-group">
+                <label for="clientBusiness" class="form-label">Empresa o Negocio</label>
+                <input type="text" id="clientBusiness" class="form-input" placeholder="Ej. Tech Innovators SAS">
+              </div>
+
+              <!-- País y Ciudad -->
+              <div class="form-group">
+                <label for="clientLocation" class="form-label">País y Ciudad *</label>
+                <input type="text" id="clientLocation" class="form-input" placeholder="Ej. Bogotá, Colombia" required>
+              </div>
+
+              <!-- Correo electrónico -->
+              <div class="form-group">
+                <label for="clientEmail" class="form-label">Correo electrónico *</label>
+                <input type="email" id="clientEmail" class="form-input" placeholder="tucorreo@ejemplo.com" required>
+              </div>
+
+              <!-- Teléfono / WhatsApp -->
+              <div class="form-group">
+                <label for="clientPhone" class="form-label">Número de contacto / WhatsApp *</label>
+                <input type="tel" id="clientPhone" class="form-input" placeholder="+57 300 000 0000" required>
+              </div>
+
+              <!-- Servicio de interés -->
+              <div class="form-group">
+                <label for="serviceSelect" class="form-label">Servicio de interés *</label>
+                <select id="serviceSelect" class="form-select" required>
+                  <option value="" disabled selected>Selecciona un servicio</option>
+                  <option value="Diseño y desarrollo web">Diseño y desarrollo web</option>
+                  <option value="Plan Básico ($450.000 COP)">Plan Básico ($450.000 COP)</option>
+                  <option value="Plan Profesional ($650.000 COP)">Plan Profesional ($650.000 COP)</option>
+                  <option value="Plan Empresarial ($950.000 COP)">Plan Empresarial ($950.000 COP)</option>
+                  <option value="Desarrollo de sistemas y software">Desarrollo de sistemas / software</option>
+                  <option value="Tiendas virtuales">Tienda virtual / E-commerce</option>
+                  <option value="Automatización e IA">Automatización e Inteligencia Artificial</option>
+                  <option value="Mantenimiento y soporte web">Mantenimiento y soporte técnico</option>
+                  <option value="Otro requerimiento digital">Otro proyecto a medida</option>
+                </select>
+              </div>
+
+              <!-- Presupuesto aproximado (opcional) -->
+              <div class="form-group form-full-width">
+                <label for="clientBudget" class="form-label">Presupuesto aproximado (opcional)</label>
+                <select id="clientBudget" class="form-select">
+                  <option value="A convenir">A convenir / Por definir</option>
+                  <option value="$450.000 a $650.000 COP">$450.000 a $650.000 COP</option>
+                  <option value="$650.000 a $950.000 COP">$650.000 a $950.000 COP</option>
+                  <option value="Más de $1.000.000 COP">Más de $1.000.000 COP</option>
+                  <option value="Cotización corporativa">Cotización corporativa a medida</option>
+                </select>
+              </div>
+
+              <!-- Descripción del proyecto -->
+              <div class="form-group form-full-width">
+                <label for="projectDesc" class="form-label">Descripción de tu necesidad o proyecto *</label>
+                <textarea id="projectDesc" class="form-textarea" placeholder="Cuéntanos qué deseas desarrollar, qué funciones necesitas o qué proceso quieres digitalizar..." required></textarea>
+              </div>
+
+              <!-- Aceptación de políticas -->
+              <div class="form-group form-full-width">
+                <label class="form-checkbox-label">
+                  <input type="checkbox" required checked>
+                  <span>Acepto el tratamiento de datos personales conforme a la política de privacidad de Servi Maxs.</span>
+                </label>
+              </div>
+
+              <!-- Botón Submit -->
+              <div class="form-full-width" style="margin-top:0.5rem;">
+                <button type="submit" class="btn btn-primary btn-block">
+                  <i class="fa-solid fa-paper-plane"></i> Solicitar asesoría y cotización
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PIE DE PÁGINA (FOOTER NEGRO AZULADO CON LOGOTIPO OFICIAL)
+       ========================================================================== -->
+  <footer class="footer-corporate">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <!-- Col 1: Logotipo oficial y propósito -->
+        <div>
+          <div class="brand-logo" style="margin-bottom:0.85rem;">
+            <div class="brand-badge-squircle">
+              <img src="assets/logo-symbol.png" alt="Servi Maxs Logotipo Oficial" width="38" height="38">
+            </div>
+            <div class="brand-text">
+              <div class="brand-name">Servi<span class="brand-alcance">Maxs</span></div>
+              <div class="brand-tagline">
+                <span class="dot-coral"></span> Tecnología que impulsa tus ideas
+              </div>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            Tecnología que impulsa tus ideas. Ayudamos a emprendedores y empresas a crecer y optimizar sus procesos mediante páginas web, sistemas y soluciones digitales de alto impacto.
+          </p>
+        </div>
+
+        <!-- Col 2: Servicios -->
+        <div>
+          <h4 class="footer-col-title">Servicios</h4>
+          <div class="footer-links-list">
+            <a href="#servicios" class="footer-link">Desarrollo Web</a>
+            <a href="#servicios" class="footer-link">Sistemas Administrativos</a>
+            <a href="#servicios" class="footer-link">Tiendas Virtuales</a>
+            <a href="#servicios" class="footer-link">Automatización con IA</a>
+            <a href="#servicios" class="footer-link">Mantenimiento y Soporte</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Enlaces de la empresa -->
+        <div>
+          <h4 class="footer-col-title">Compañía</h4>
+          <div class="footer-links-list">
+            <a href="#inicio" class="footer-link">Inicio</a>
+            <a href="#nosotros" class="footer-link">Nosotros</a>
+            <a href="#beneficios" class="footer-link">Beneficios</a>
+            <a href="#portafolio" class="footer-link">Portafolio</a>
+            <a href="#planes" class="footer-link">Planes Comerciales</a>
+            <a href="#faq" class="footer-link">Preguntas Frecuentes</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Información de contacto -->
+        <div>
+          <h4 class="footer-col-title">Contacto</h4>
+          <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:0.6rem;">
+            <i class="fa-brands fa-whatsapp" style="color:#25D366; margin-right:8px;"></i> +57 300 123 4567
+          </p>
+          <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:1.15rem;">
+            <i class="fa-solid fa-envelope" style="color:var(--blue-light); margin-right:8px;"></i> maxsservi@gmail.com
+          </p>
+          <span style="font-size:0.8rem; color:var(--text-muted);">Atención a clientes en Colombia y el exterior.</span>
+        </div>
+
+      </div>
+
+      <!-- Barra inferior legal -->
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 <strong>Servi Maxs</strong>. Todos los derechos reservados.
+        </div>
+        <div>
+          <span>Tecnología que impulsa tus ideas &bull; Política de Privacidad y Tratamiento de Datos</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       BOTÓN FLOTANTE DE WHATSAPP (ESQUINA INFERIOR IZQUIERDA)
+       ========================================================================== -->
+  <a href="https://wa.me/573113754530?text=%C2%A1Hola!%20Estoy%20interesado%20en%20los%20servicios%20de%20Servi%20Alcance.%20Quisiera%20recibir%20informaci%C3%B3n%20sobre%20sus%20soluciones%20digitales%20y%20conocer%20c%C3%B3mo%20pueden%20ayudarme%20con%20mi%20negocio.%20%C2%BFPodr%C3%ADan%20brindarme%20asesor%C3%ADa%20y%20una%20cotizaci%C3%B3n%3F" 
+     class="whatsapp-float-btn" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Contactar a Servi Maxs por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="tooltip-bubble">Hablemos de tu proyecto</span>
+  </a>
+
+  <!-- ==========================================================================
+       BARRA DE ACCIÓN INFERIOR MÓVIL (DOCK)
+       ========================================================================== -->
+  <div class="mobile-bottom-bar">
+    <a href="#inicio" class="bottom-bar-item active">
+      <i class="fa-solid fa-house"></i>
+      <span>Inicio</span>
+    </a>
+    <a href="#servicios" class="bottom-bar-item">
+      <i class="fa-solid fa-layer-group"></i>
+      <span>Servicios</span>
+    </a>
+    <a href="#planes" class="bottom-bar-item">
+      <i class="fa-solid fa-tags"></i>
+      <span>Planes</span>
+    </a>
+    <a href="https://wa.me/573113754530?text=%C2%A1Hola!%20Estoy%20interesado%20en%20los%20servicios%20de%20Servi%20Alcance.%20Quisiera%20recibir%20informaci%C3%B3n%20sobre%20sus%20soluciones%20digitales%20y%20conocer%20c%C3%B3mo%20pueden%20ayudarme%20con%20mi%20negocio.%20%C2%BFPodr%C3%ADan%20brindarme%20asesor%C3%ADa%20y%20una%20cotizaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" class="bottom-bar-item highlight">
+      <i class="fa-brands fa-whatsapp" style="color:#25D366;"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="#contacto" class="bottom-bar-item highlight">
+      <i class="fa-solid fa-file-invoice-dollar"></i>
+      <span>Cotizar</span>
+    </a>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL DE CONFIRMACIÓN DE ENVÍO
+       ========================================================================== -->
+  <div class="modal-backdrop" id="successModal">
+    <div class="modal-content-box">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Cerrar modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-icon-success">
+        <i class="fa-solid fa-check"></i>
+      </div>
+
+      <h3 class="modal-title">¡Gracias por contactar a Servi Maxs!</h3>
+      <p class="modal-desc">
+        Hemos recibido tu solicitud. Nos pondremos en contacto contigo para conocer más sobre tu proyecto y brindarte la mejor asesoría técnica.
+      </p>
+
+      <div style="display:flex; flex-direction:column; gap:0.85rem;">
+        <button class="btn btn-whatsapp btn-block" id="modalWaActionBtn">
+          <i class="fa-brands fa-whatsapp"></i> Continuar cotización por WhatsApp
+        </button>
+        <button class="btn btn-secondary btn-block" id="modalOkBtn">
+          Entendido, gracias
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL DE DEMOSTRACIÓN DE PROYECTOS DEL PORTAFOLIO
+       ========================================================================== -->
+  <div class="modal-backdrop" id="demoModal">
+    <div class="modal-content-box" style="max-width:620px; text-align:left;">
+      <button class="modal-close-btn" id="demoModalClose" aria-label="Cerrar modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <span id="demoCategory" class="demo-header-tag" style="margin-bottom:0.75rem;">Categoría</span>
+      <h3 id="demoTitle" class="modal-title" style="margin-bottom:0.75rem;">Título de la demostración</h3>
+      <p id="demoDescription" class="modal-desc" style="margin-bottom:1.25rem;">Descripción detallada de la demostración funcional.</p>
+
+      <div style="margin-bottom:1.75rem;">
+        <div style="font-size:0.88rem; font-weight:800; color:#FFFFFF; margin-bottom:0.6rem;">
+          Características incluidas en este tipo de desarrollo:
+        </div>
+        <ul id="demoFeaturesList" class="service-feature-list" style="margin-bottom:0; padding-top:0.5rem;">
+          <!-- Inyectado dinámicamente -->
+        </ul>
+      </div>
+
+      <div style="display:flex; gap:0.85rem; flex-wrap:wrap;">
+        <a href="#contacto" class="btn btn-primary" onclick="document.getElementById('demoModal').classList.remove('open'); document.body.style.overflow='';" style="flex:1;">
+          <i class="fa-solid fa-paper-plane"></i> Cotizar un desarrollo similar
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
