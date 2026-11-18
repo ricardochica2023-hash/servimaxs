@@ -42,7 +42,7 @@
     "name": "Servi Maxs",
     "image": "assets/logo-symbol.png",
     "description": "Desarrollo de páginas web, software administrativo, tiendas virtuales y soluciones digitales para empresas y emprendedores.",
-    "priceRange": "$450.000 COP - $950.000 COP+",
+    "priceRange": "$890.000 COP - $3.500.000 COP+",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "CO"
@@ -121,43 +121,50 @@
   <!-- ==========================================================================
        DRAWER MÓVIL LATERAL
        ========================================================================== -->
-  <div class="mobile-drawer" id="mobileDrawer">
+  <nav class="mobile-drawer" id="mobileDrawer" aria-label="Navegación móvil">
+    <div class="mobile-drawer-heading">
+      <div>
+        <span class="mobile-drawer-eyebrow">MENÚ PRINCIPAL</span>
+        <p class="mobile-drawer-title">Explora Servi Maxs</p>
+      </div>
+      <i class="fa-solid fa-compass" aria-hidden="true"></i>
+    </div>
     <div class="mobile-drawer-links">
       <a href="#inicio" class="mobile-drawer-link">
-        <span><i class="fa-solid fa-house"></i> Inicio</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <span class="mobile-drawer-item"><span class="mobile-drawer-icon" aria-hidden="true"><i class="fa-solid fa-house"></i></span><span class="mobile-drawer-label">Inicio</span></span>
+        <i class="fa-solid fa-chevron-right mobile-drawer-arrow" aria-hidden="true"></i>
       </a>
       <a href="#soluciones" class="mobile-drawer-link">
-        <span><i class="fa-solid fa-microchip"></i> Problemas vs Soluciones</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <span class="mobile-drawer-item"><span class="mobile-drawer-icon" aria-hidden="true"><i class="fa-solid fa-microchip"></i></span><span class="mobile-drawer-label">Problemas vs Soluciones</span></span>
+        <i class="fa-solid fa-chevron-right mobile-drawer-arrow" aria-hidden="true"></i>
       </a>
       <a href="#servicios" class="mobile-drawer-link">
-        <span><i class="fa-solid fa-cubes"></i> Nuestros Servicios</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <span class="mobile-drawer-item"><span class="mobile-drawer-icon" aria-hidden="true"><i class="fa-solid fa-cubes"></i></span><span class="mobile-drawer-label">Nuestros Servicios</span></span>
+        <i class="fa-solid fa-chevron-right mobile-drawer-arrow" aria-hidden="true"></i>
       </a>
       <a href="#beneficios" class="mobile-drawer-link">
-        <span><i class="fa-solid fa-wand-magic-sparkles"></i> ¿Por qué elegirnos?</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <span class="mobile-drawer-item"><span class="mobile-drawer-icon" aria-hidden="true"><i class="fa-solid fa-wand-magic-sparkles"></i></span><span class="mobile-drawer-label">¿Por qué elegirnos?</span></span>
+        <i class="fa-solid fa-chevron-right mobile-drawer-arrow" aria-hidden="true"></i>
       </a>
       <a href="#portafolio" class="mobile-drawer-link">
-        <span><i class="fa-solid fa-laptop-code"></i> Demostraciones / Proyectos</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <span class="mobile-drawer-item"><span class="mobile-drawer-icon" aria-hidden="true"><i class="fa-solid fa-laptop-code"></i></span><span class="mobile-drawer-label">Demostraciones / Proyectos</span></span>
+        <i class="fa-solid fa-chevron-right mobile-drawer-arrow" aria-hidden="true"></i>
       </a>
       <a href="#proceso" class="mobile-drawer-link">
-        <span><i class="fa-solid fa-bars-progress"></i> Proceso de Trabajo</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <span class="mobile-drawer-item"><span class="mobile-drawer-icon" aria-hidden="true"><i class="fa-solid fa-bars-progress"></i></span><span class="mobile-drawer-label">Proceso de Trabajo</span></span>
+        <i class="fa-solid fa-chevron-right mobile-drawer-arrow" aria-hidden="true"></i>
       </a>
       <a href="#planes" class="mobile-drawer-link">
-        <span><i class="fa-solid fa-tags"></i> Planes y Precios</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <span class="mobile-drawer-item"><span class="mobile-drawer-icon" aria-hidden="true"><i class="fa-solid fa-tags"></i></span><span class="mobile-drawer-label">Planes y Precios</span></span>
+        <i class="fa-solid fa-chevron-right mobile-drawer-arrow" aria-hidden="true"></i>
       </a>
       <a href="#nosotros" class="mobile-drawer-link">
-        <span><i class="fa-solid fa-building"></i> Sobre Servi Maxs</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <span class="mobile-drawer-item"><span class="mobile-drawer-icon" aria-hidden="true"><i class="fa-solid fa-building"></i></span><span class="mobile-drawer-label">Sobre Servi Maxs</span></span>
+        <i class="fa-solid fa-chevron-right mobile-drawer-arrow" aria-hidden="true"></i>
       </a>
       <a href="#faq" class="mobile-drawer-link">
-        <span><i class="fa-solid fa-circle-question"></i> Preguntas Frecuentes</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <span class="mobile-drawer-item"><span class="mobile-drawer-icon" aria-hidden="true"><i class="fa-solid fa-circle-question"></i></span><span class="mobile-drawer-label">Preguntas Frecuentes</span></span>
+        <i class="fa-solid fa-chevron-right mobile-drawer-arrow" aria-hidden="true"></i>
       </a>
     </div>
 
@@ -169,7 +176,7 @@
         <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp Directo
       </a>
     </div>
-  </div>
+  </nav>
 
   <!-- ==========================================================================
        SECCIÓN 1. HERO (PRESENTACIÓN TECNOLÓGICA CON BRANDING OFICIAL)
@@ -914,161 +921,149 @@
   <!-- ==========================================================================
        SECCIÓN 8. PLANES Y COTIZACIONES
        ========================================================================== -->
-<section class="section" id="planes">
-  <div class="container">
-    
-    <div class="section-header reveal">
-      <span class="section-tag">Precios Claros y Accesibles</span>
-      <h2 class="section-title">Planes diseñados para impulsar tu marca.</h2>
-      <p class="section-description">
-        Transparencia desde el primer día. Conoce nuestros paquetes para páginas web o solicita una cotización personalizada para sistemas y software.
-      </p>
-    </div>
-
-    <div class="pricing-grid">
+  <section class="section" id="planes">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Precios Claros y Accesibles</span>
+        <h2 class="section-title">Planes diseñados para impulsar tu marca.</h2>
+        <p class="section-description">
+          Transparencia desde el primer día. Conoce nuestros paquetes para páginas web o solicita una cotización personalizada para sistemas y software.
+        </p>
+      </div>
       
-      <!-- PLAN BÁSICO -->
-      <div class="pricing-card reveal">
-        <div class="pricing-header">
-          <h3 class="plan-name">Plan Básico</h3>
-          <div class="plan-price">$450.000 <span class="plan-currency">COP</span></div>
-          <p class="plan-target">Para emprendedores que necesitan comenzar a tener presencia digital.</p>
+      
+
+      <div class="pricing-grid">
+        <div class="pricing-card reveal">
+          <div class="pricing-header">
+            <h3 class="plan-name">Web esencial</h3>
+            <p class="plan-target">Para estar en internet sin gastar de más, con un alcance corto y claro.</p>
+            <div class="plan-price-wrap">
+              <span class="plan-desde">Desde</span>
+              <div class="plan-price">$890.000 <span class="plan-currency">COP</span></div>
+            </div>
+          </div>
+          <ul class="plan-features">
+            <li>Una página con hasta 4 secciones</li>
+            <li>Desarrollo sobre componentes ya construidos</li>
+            <li>Botón de WhatsApp y datos de contacto</li>
+            <li>Diseño optimizado para dispositivos móviles</li>
+            <li>Tú entregas los textos y las fotografías</li>
+          </ul>
+          <button class="btn btn-block btn-plan btn-pricing" data-select-service="Web esencial (desde $890.000 COP)">
+            Pedir cotización
+          </button>
         </div>
 
-        <ul class="plan-features">
-          <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Página web informativa</li>
-          <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Diseño 100% adaptable a móviles</li>
-          <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Presentación del negocio y servicios</li>
-          <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Información completa de contacto</li>
-          <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Botón directo de WhatsApp</li>
-          <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Alcance y secciones definidas en propuesta</li>
-        </ul>
-
-        <button class="btn btn-secondary btn-block btn-pricing" data-select-service="Plan Básico ($450.000 COP)">
-          Elegir Plan Básico
-        </button>
-      </div>
-
-      <!-- PLAN PROFESIONAL (RECOMENDADO) -->
-      <div class="pricing-card featured reveal">
-        <span class="featured-ribbon">⭐ Paquete Recomendado</span>
-        <div class="pricing-header">
-          <h3 class="plan-name" style="color:var(--blue-light);">Plan Profesional</h3>
-          <div class="plan-price">$650.000 <span class="plan-currency">COP</span></div>
-          <p class="plan-target">Para negocios que quieren presentar sus servicios de forma más completa y atractiva.</p>
+        <div class="pricing-card featured reveal">
+          <div class="pricing-header">
+            <h3 class="plan-name">Landing page</h3>
+            <p class="plan-target">Una página de desplazamiento vertical para vender un servicio o una campaña.</p>
+            <div class="plan-price-wrap">
+              <span class="plan-desde">Desde</span>
+              <div class="plan-price">$1.800.000 <span class="plan-currency">COP</span></div>
+            </div>
+          </div>
+          <ul class="plan-features">
+            <li>Diseño personalizado según tu marca</li>
+            <li>Secciones estratégicas para presentar tu oferta</li>
+            <li>Formulario de contacto</li>
+            <li>Botón directo de WhatsApp</li>
+            <li>Optimización básica para buscadores</li>
+            <li>Diseño adaptable a celulares y computadores</li>
+          </ul>
+          <button class="btn btn-block btn-plan btn-plan-featured btn-pricing" data-select-service="Landing page (desde $1.800.000 COP)">
+            Pedir cotización
+          </button>
         </div>
 
-        <ul class="plan-features">
-          <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> <strong>Todo lo del plan básico</strong></li>
-          <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> Galería de imágenes / trabajos</li>
-          <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> Secciones adicionales de contenido</li>
-          <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> Formulario de contacto interactivo</li>
-          <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> Ubicación en mapa Google Maps</li>
-          <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> Configuración inicial de publicación</li>
-        </ul>
-
-        <button class="btn btn-primary btn-block btn-pricing" data-select-service="Plan Profesional ($650.000 COP)">
-          <i class="fa-solid fa-fire"></i> Elegir Plan Profesional
-        </button>
-      </div>
-
-      <!-- PLAN EMPRESARIAL -->
-      <div class="pricing-card reveal">
-        <div class="pricing-header">
-          <h3 class="plan-name">Plan Empresarial</h3>
-          <div class="plan-price">$950.000 <span class="plan-currency">COP</span></div>
-          <p class="plan-target">Para empresas que requieren una presentación digital más completa y estratégica.</p>
+        <div class="pricing-card reveal">
+          <div class="pricing-header">
+            <h3 class="plan-name">Sitio corporativo</h3>
+            <p class="plan-target">Una presencia digital completa para presentar tu empresa y sus servicios.</p>
+            <div class="plan-price-wrap">
+              <span class="plan-desde">Desde</span>
+              <div class="plan-price">$3.500.000 <span class="plan-currency">COP</span></div>
+            </div>
+          </div>
+          <ul class="plan-features">
+            <li>De 5 a 8 páginas o secciones</li>
+            <li>Diseño personalizado</li>
+            <li>Inicio, servicios, nosotros y contacto</li>
+            <li>Formularios de contacto e integración con WhatsApp</li>
+            <li>SEO básico</li>
+            <li>Sitemap y Search Console configurados</li>
+            <li>Diseño adaptable a dispositivos móviles</li>
+          </ul>
+          <button class="btn btn-block btn-plan btn-pricing" data-select-service="Sitio corporativo (desde $3.500.000 COP)">
+            Pedir cotización
+          </button>
         </div>
 
-        <ul class="plan-features">
-          <li class="plan-feature-item"><i class="fa-solid fa-check"></i> <strong>Todo lo del plan profesional</strong></li>
-          <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Secciones y contenido ampliados</li>
-          <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Diseño 100% personalizado</li>
-          <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Catálogo estructurado de productos o servicios</li>
-          <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Funcionalidades especiales acordadas</li>
-          <li class="plan-feature-item"><i class="fa-solid fa-check"></i> Optimización SEO base para Google</li>
-        </ul>
+        <div class="pricing-card reveal">
+          <div class="pricing-header">
+            <h3 class="plan-name">Chatbots y asistentes virtuales</h3>
+            <p class="plan-target">Automatiza la atención y responde consultas frecuentes de tus clientes.</p>
+            <div class="plan-price-wrap">
+              <span class="plan-desde">Precio</span>
+              <div class="plan-price plan-price-custom">A medida</div>
+            </div>
+          </div>
+          <ul class="plan-features">
+            <li>Respuestas automáticas a preguntas frecuentes</li>
+            <li>Atención inicial disponible las 24 horas</li>
+            <li>Captura y clasificación de consultas y clientes potenciales</li>
+            <li>Derivación a una persona cuando se requiera</li>
+            <li>Canales e integraciones definidos según tu proyecto</li>
+          </ul>
+          <button class="btn btn-block btn-plan btn-pricing" data-select-service="Chatbots y asistentes virtuales (cotización a medida)">
+            Pedir cotización
+          </button>
+        </div>
 
-        <button class="btn btn-secondary btn-block btn-pricing" data-select-service="Plan Empresarial ($950.000 COP)">
-          Elegir Plan Empresarial
-        </button>
+        <div class="pricing-card reveal">
+          <div class="pricing-header">
+            <h3 class="plan-name">Agentes de inteligencia artificial</h3>
+            <p class="plan-target">Soluciones de IA para apoyar tareas y procesos específicos de tu negocio.</p>
+            <div class="plan-price-wrap">
+              <span class="plan-desde">Precio</span>
+              <div class="plan-price plan-price-custom">A medida</div>
+            </div>
+          </div>
+          <ul class="plan-features">
+            <li>Automatización de tareas repetitivas</li>
+            <li>Asistencia basada en la información de tu negocio</li>
+            <li>Integración con herramientas y sistemas, según alcance</li>
+            <li>Flujos de trabajo diseñados para tus necesidades</li>
+            <li>Alcance, integraciones y costos definidos en la propuesta</li>
+          </ul>
+          <button class="btn btn-block btn-plan btn-pricing" data-select-service="Agentes de inteligencia artificial (cotización a medida)">
+            Pedir cotización
+          </button>
+        </div>
+      </div>
+
+      <!-- Nota comercial transparente -->
+      <div class="commercial-disclaimer-card reveal">
+        <i class="fa-solid fa-handshake-angle"></i>
+        <div class="commercial-disclaimer-text">
+          <strong>Nota comercial para los paquetes:</strong> El dominio, alojamiento (hosting), licencias, integraciones pagas de terceros, creación profesional de contenido fotográfico y funcionalidades especiales deben cotizarse por separado cuando correspondan. Para sistemas administrativos o tiendas virtuales completas, preparamos cotizaciones a medida según el alcance.
+        </div>
+      </div>
+
+      <!-- Banner para sistemas / software personalizado -->
+      <div class="custom-quote-banner reveal">
+        <div class="custom-quote-info">
+          <h3>¿Necesitas un sistema administrativo o tienda virtual?</h3>
+          <p>Los sistemas de inventario, tiendas online y herramientas a medida varían según los procesos de tu negocio. Escríbenos y preparamos una propuesta personalizada.</p>
+        </div>
+        <a href="#contacto" class="btn btn-primary" style="white-space:nowrap;">
+          <i class="fa-solid fa-calculator"></i> Quiero cotizar mi proyecto
+        </a>
       </div>
 
     </div>
-
-    <!-- Nota comercial transparente -->
-    <div class="commercial-disclaimer-card reveal">
-      <i class="fa-solid fa-handshake-angle"></i>
-      <div class="commercial-disclaimer-text">
-        <strong>Nota comercial para los paquetes:</strong> El dominio, alojamiento (hosting), licencias, integraciones pagas de terceros, creación profesional de contenido fotográfico y funcionalidades especiales deben cotizarse por separado cuando correspondan. Para sistemas administrativos o tiendas virtuales completas, preparamos cotizaciones a medida según el alcance.
-      </div>
-    </div>
-
-    <!-- Banner para sistemas / software personalizado -->
-    <div class="custom-quote-banner reveal">
-      <div class="custom-quote-info">
-        <h3>¿Necesitas un sistema administrativo o tienda virtual?</h3>
-        <p>Los sistemas de inventario, tiendas online y herramientas a medida varían según los procesos de tu negocio. Escríbenos y preparamos una propuesta personalizada.</p>
-      </div>
-      <a href="#contacto" class="btn btn-primary" style="white-space:nowrap;">
-        <i class="fa-solid fa-calculator"></i> Quiero cotizar mi proyecto
-      </a>
-    </div>
-
-  </div>
-</section>
-<!-- New Catalog of Services -->
-<section class="section" id="catalogo-servicios">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">Catálogo Comercial</span>
-      <h2 class="section-title">Servicios SERVIMAX</h2>
-      <p class="section-description">Explora nuestras soluciones digitales con precios claros y descripción detallada.</p>
-    </div>
-    <div class="services-grid">
-      <!-- Service Card Example -->
-      <div class="service-card" data-bs-toggle="modal" data-bs-target="#serviceWebDesignModal">
-        <div class="service-icon-box"><i class="fa-solid fa-laptop-code"></i></div>
-        <h3 class="service-title">Desarrollo y diseño web</h3>
-        <p class="service-text">Desde $890.000 COP</p>
-        <ul class="service-feature-list">
-          <li><i class="fa-solid fa-check"></i> Una página con hasta 4 secciones.</li>
-          <li><i class="fa-solid fa-check"></i> Desarrollo sobre componentes ya construidos.</li>
-          <li><i class="fa-solid fa-check"></i> Botón de WhatsApp y datos de contacto.</li>
-          <li><i class="fa-solid fa-check"></i> Diseño optimizado para móviles.</li>
-        </ul>
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#serviceWebDesignModal">Más info</button>
-      </div>
-      <!-- Add more service cards similarly, each with its own modal -->
-    </div>
-  </div>
-</section>
-<!-- Modals for Services -->
-<div class="modal fade" id="serviceWebDesignModal" tabindex="-1" aria-labelledby="serviceWebDesignModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="serviceWebDesignModalLabel">Desarrollo y diseño web</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p><strong>Web esencial</strong> – Desde $890.000 COP</p>
-        <ul>
-          <li>Una página con hasta 4 secciones.</li>
-          <li>Desarrollo sobre componentes ya construidos.</li>
-          <li>Botón de WhatsApp y datos de contacto.</li>
-          <li>Diseño optimizado para dispositivos móviles.</li>
-        </ul>
-        <p>Ideal para negocios que necesitan presencia en línea sin gasto excesivo.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <a href="#contacto" class="btn btn-primary">Cotizar este servicio</a>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Additional modals for other services -->
+  </section>
 
   <!-- ==========================================================================
        SECCIÓN 9. PREGUNTAS FRECUENTES (FAQ)
@@ -1094,7 +1089,7 @@
           </button>
           <div class="faq-answer-pane">
             <div class="faq-answer-content">
-              El precio depende de las características, el diseño y las funcionalidades que necesite tu negocio. En Servi Maxs contamos con planes iniciales desde $450.000 COP para emprendedores y también desarrollamos propuestas personalizadas para proyectos más amplios.
+              El precio depende de las características, el diseño y las funcionalidades que necesite tu negocio. En Servi Maxs contamos con páginas web desde $890.000 COP y también desarrollamos propuestas personalizadas para proyectos más amplios.
             </div>
           </div>
         </div>
@@ -1303,12 +1298,13 @@
                 <select id="serviceSelect" class="form-select" required>
                   <option value="" disabled selected>Selecciona un servicio</option>
                   <option value="Diseño y desarrollo web">Diseño y desarrollo web</option>
-                  <option value="Plan Básico ($450.000 COP)">Plan Básico ($450.000 COP)</option>
-                  <option value="Plan Profesional ($650.000 COP)">Plan Profesional ($650.000 COP)</option>
-                  <option value="Plan Empresarial ($950.000 COP)">Plan Empresarial ($950.000 COP)</option>
+                  <option value="Web esencial (desde $890.000 COP)">Web esencial (desde $890.000 COP)</option>
+                  <option value="Landing page (desde $1.800.000 COP)">Landing page (desde $1.800.000 COP)</option>
+                  <option value="Sitio corporativo (desde $3.500.000 COP)">Sitio corporativo (desde $3.500.000 COP)</option>
                   <option value="Desarrollo de sistemas y software">Desarrollo de sistemas / software</option>
                   <option value="Tiendas virtuales">Tienda virtual / E-commerce</option>
-                  <option value="Automatización e IA">Automatización e Inteligencia Artificial</option>
+                  <option value="Chatbots y asistentes virtuales (cotización a medida)">Chatbots y asistentes virtuales</option>
+                  <option value="Agentes de inteligencia artificial (cotización a medida)">Agentes de inteligencia artificial</option>
                   <option value="Mantenimiento y soporte web">Mantenimiento y soporte técnico</option>
                   <option value="Otro requerimiento digital">Otro proyecto a medida</option>
                 </select>
@@ -1319,9 +1315,9 @@
                 <label for="clientBudget" class="form-label">Presupuesto aproximado (opcional)</label>
                 <select id="clientBudget" class="form-select">
                   <option value="A convenir">A convenir / Por definir</option>
-                  <option value="$450.000 a $650.000 COP">$450.000 a $650.000 COP</option>
-                  <option value="$650.000 a $950.000 COP">$650.000 a $950.000 COP</option>
-                  <option value="Más de $1.000.000 COP">Más de $1.000.000 COP</option>
+                  <option value="$890.000 a $1.800.000 COP">$890.000 a $1.800.000 COP</option>
+                  <option value="$1.800.000 a $3.500.000 COP">$1.800.000 a $3.500.000 COP</option>
+                  <option value="Más de $3.500.000 COP">Más de $3.500.000 COP</option>
                   <option value="Cotización corporativa">Cotización corporativa a medida</option>
                 </select>
               </div>
@@ -1404,6 +1400,14 @@
             <a href="#planes" class="footer-link">Planes Comerciales</a>
             <a href="#faq" class="footer-link">Preguntas Frecuentes</a>
           </div>
+          <h4 class="footer-col-title footer-legal-title">Información legal</h4>
+          <div class="footer-links-list">
+            <a href="legal.html#terminos" class="footer-link">Términos y condiciones</a>
+            <a href="legal.html#privacidad" class="footer-link">Política de privacidad</a>
+            <a href="legal.html#dpa" class="footer-link">Acuerdo de tratamiento de datos (DPA)</a>
+            <a href="legal.html#reembolsos" class="footer-link">Política de reembolso</a>
+            <a href="legal.html#cookies" class="footer-link">Política de cookies</a>
+          </div>
         </div>
 
         <!-- Col 4: Información de contacto -->
@@ -1426,7 +1430,7 @@
           &copy; 2026 <strong>Servi Maxs</strong>. Todos los derechos reservados.
         </div>
         <div>
-          <span>Tecnología que impulsa tus ideas &bull; Política de Privacidad y Tratamiento de Datos</span>
+          <span>Tecnología que impulsa tus ideas &bull; <a href="legal.html#privacidad" class="footer-link">Política de privacidad y tratamiento de datos</a></span>
         </div>
       </div>
 
