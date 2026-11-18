@@ -1,0 +1,1590 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conoce el catálogo de servicios y planes de Servi Maxs: páginas web, software, sistemas empresariales, inteligencia artificial, automatización, aplicaciones y soporte.">
+  <meta name="theme-color" content="#03070E">
+  <title>Planes y servicios | Servi Maxs</title>
+  <link rel="icon" type="image/png" href="assets/logo-symbol.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .catalog-header {
+      position: relative;
+      z-index: 2;
+      border-bottom: 1px solid var(--border-card);
+      background: rgba(4, 8, 17, 0.78);
+      backdrop-filter: blur(16px);
+    }
+
+    .catalog-header-inner {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .catalog-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .catalog-header-link {
+      color: var(--text-secondary);
+      font-weight: 600;
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    .catalog-header-link:hover {
+      color: var(--text-white);
+    }
+
+    .catalog-hero {
+      position: relative;
+      z-index: 2;
+      padding: clamp(4rem, 9vw, 7rem) 0 3rem;
+      text-align: center;
+    }
+
+    .catalog-hero .section-tag {
+      margin-bottom: 1rem;
+    }
+
+    .catalog-hero h1 {
+      max-width: 900px;
+      margin: 0 auto 1rem;
+      font-family: var(--font-main);
+      font-size: clamp(2.2rem, 6vw, 4.25rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+      color: var(--text-white);
+    }
+
+    .catalog-hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+    }
+
+    .catalog-nav {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      gap: 0.65rem;
+      overflow-x: auto;
+      padding: 0.25rem 0 1.75rem;
+      scrollbar-width: thin;
+    }
+
+    .catalog-nav a {
+      flex: 0 0 auto;
+      padding: 0.55rem 0.85rem;
+      border: 1px solid var(--border-blue);
+      border-radius: var(--radius-pill);
+      background: rgba(10, 20, 38, 0.72);
+      color: var(--text-secondary);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
+    }
+
+    .catalog-nav a:hover {
+      border-color: var(--blue-light);
+      background: rgba(37, 99, 235, 0.15);
+      color: var(--text-white);
+    }
+
+    .catalog-content {
+      position: relative;
+      z-index: 2;
+      padding-bottom: 4rem;
+    }
+
+    .catalog-category {
+      scroll-margin-top: 95px;
+      margin: 1.25rem 0 3.75rem;
+    }
+
+    .catalog-category-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 1.25rem;
+      margin-bottom: 1.4rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-card);
+    }
+
+    .catalog-category-heading h2 {
+      margin: 0;
+      color: var(--text-white);
+      font-family: var(--font-main);
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .catalog-category-heading p {
+      max-width: 520px;
+      margin: 0.5rem 0 0;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .catalog-count {
+      flex: 0 0 auto;
+      color: var(--blue-light);
+      font-size: 0.78rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .catalog-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 1.35rem;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      background: var(--bg-card);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(12px);
+      transition: transform var(--transition-normal), border-color var(--transition-normal), background var(--transition-normal);
+    }
+
+    .catalog-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-blue-hover);
+      background: var(--bg-card-hover);
+    }
+
+    .catalog-card h3 {
+      margin: 0 0 0.65rem;
+      color: var(--text-white);
+      font-family: var(--font-main);
+      font-size: 1.1rem;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .catalog-price {
+      display: inline-flex;
+      align-self: flex-start;
+      margin-bottom: 0.8rem;
+      padding: 0.35rem 0.65rem;
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      border-radius: var(--radius-pill);
+      background: rgba(37, 99, 235, 0.12);
+      color: var(--blue-sky);
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    .catalog-description {
+      margin: 0 0 1rem;
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .catalog-card details {
+      margin: 0 0 1.15rem;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 0.85rem;
+    }
+
+    .catalog-card summary {
+      color: var(--blue-light);
+      cursor: pointer;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .catalog-card summary:focus-visible,
+    .catalog-nav a:focus-visible,
+    .catalog-header a:focus-visible {
+      outline: 2px solid var(--blue-light);
+      outline-offset: 3px;
+    }
+
+    .catalog-features {
+      display: grid;
+      gap: 0.45rem;
+      margin: 0.8rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .catalog-features li {
+      position: relative;
+      padding-left: 1rem;
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      line-height: 1.45;
+    }
+
+    .catalog-features li::before {
+      position: absolute;
+      top: 0.55em;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--blue-electric);
+      content: "";
+    }
+
+    .catalog-quote {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: auto;
+      text-decoration: none;
+    }
+
+    .catalog-terms {
+      margin: 0 0 3.5rem;
+      padding: clamp(1.25rem, 3vw, 2rem);
+      border: 1px solid var(--border-blue);
+      border-radius: var(--radius-lg);
+      background: var(--bg-card);
+    }
+
+    .catalog-terms h2 {
+      margin: 0 0 0.8rem;
+      color: var(--text-white);
+      font-size: 1.25rem;
+    }
+
+    .catalog-terms ul {
+      display: grid;
+      gap: 0.55rem;
+      margin: 0;
+      padding-left: 1.2rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .catalog-bottom {
+      position: relative;
+      z-index: 2;
+      padding: 0 0 4rem;
+      text-align: center;
+    }
+
+    .catalog-bottom p {
+      margin: 0 auto 1.2rem;
+      color: var(--text-secondary);
+    }
+
+    @media (max-width: 520px) {
+      .catalog-header-inner {
+        min-height: 66px;
+      }
+
+      .catalog-header-actions {
+        gap: 0.75rem;
+      }
+
+      .catalog-header-actions .btn {
+        padding: 0.65rem 0.8rem;
+        font-size: 0.8rem;
+      }
+
+      .catalog-header-link {
+        font-size: 0.82rem;
+      }
+
+      .catalog-category-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+    }
+
+    body.catalog-page {
+      --catalog-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+      --catalog-ease-soft: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+      padding-bottom: 0;
+      background:
+        radial-gradient(ellipse at 82% 10%, rgba(37, 99, 235, 0.13), transparent 34rem),
+        var(--bg-void);
+    }
+
+    .catalog-page .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.65s ease-out, transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .catalog-page .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .catalog-page .catalog-card.reveal {
+      transition: opacity 0.65s ease-out, transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .catalog-page .catalog-card.reveal.revealed:hover {
+      transform: translateY(-3px);
+    }
+
+    .catalog-page .brand-badge-squircle,
+    .catalog-page .btn {
+      transition-duration: 450ms;
+      transition-timing-function: var(--catalog-ease);
+    }
+
+    .catalog-page .brand-badge-squircle {
+      transition-property: transform, box-shadow;
+    }
+
+    .catalog-page .btn {
+      transition-property: transform, color, background, border-color, box-shadow;
+    }
+
+    .catalog-header {
+      position: sticky;
+      top: 0;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.24);
+    }
+
+    .catalog-header-link,
+    .catalog-filter-button,
+    .catalog-filter-button i,
+    .catalog-search,
+    .catalog-search button,
+    .catalog-card,
+    .catalog-card-icon,
+    .catalog-card summary,
+    .catalog-summary-icon,
+    .catalog-summary-chevron,
+    .catalog-quote,
+    .catalog-quote i {
+      transition-timing-function: var(--catalog-ease);
+    }
+
+    .catalog-header-link {
+      transition-duration: 380ms;
+    }
+
+    .catalog-hero {
+      padding: clamp(3rem, 7vw, 6rem) 0 2.5rem;
+      text-align: left;
+    }
+
+    .catalog-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+      align-items: center;
+      gap: clamp(1.5rem, 5vw, 4.5rem);
+    }
+
+    .catalog-hero .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .catalog-hero .section-tag i {
+      color: var(--coral-bright);
+    }
+
+    .catalog-hero h1 {
+      max-width: 720px;
+      margin: 0 0 1.2rem;
+      font-size: clamp(2.5rem, 5.3vw, 4.4rem);
+      letter-spacing: -0.055em;
+    }
+
+    .catalog-hero h1 span {
+      color: var(--blue-light);
+      text-shadow: 0 0 32px rgba(59, 130, 246, 0.35);
+    }
+
+    .catalog-hero p {
+      max-width: 610px;
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .catalog-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.85rem;
+      margin-top: 1.6rem;
+    }
+
+    .catalog-hero-actions a {
+      text-decoration: none;
+    }
+
+    .catalog-hero-art {
+      position: relative;
+      isolation: isolate;
+      min-width: 0;
+    }
+
+    .catalog-hero-art::before {
+      position: absolute;
+      z-index: -1;
+      inset: 14% 12%;
+      border-radius: 50%;
+      background: rgba(37, 99, 235, 0.34);
+      content: "";
+      filter: blur(55px);
+    }
+
+    .catalog-hero-art img {
+      display: block;
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 26px 48px rgba(0, 0, 0, 0.42));
+      animation: catalog-float 9s var(--catalog-ease-soft) infinite;
+      will-change: transform;
+    }
+
+    .catalog-hero-chip {
+      position: absolute;
+      right: 0;
+      bottom: 8%;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.75rem 1rem;
+      border: 1px solid rgba(147, 197, 253, 0.35);
+      border-radius: var(--radius-pill);
+      background: rgba(7, 16, 30, 0.86);
+      box-shadow: var(--glow-blue-sm);
+      color: var(--text-primary);
+      font-size: 0.8rem;
+      font-weight: 700;
+      backdrop-filter: blur(14px);
+    }
+
+    .catalog-hero-chip i {
+      color: #62E3BB;
+    }
+
+    .catalog-hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+      margin-top: 2rem;
+      padding-top: 1.35rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .catalog-hero-stat {
+      display: grid;
+      gap: 0.1rem;
+    }
+
+    .catalog-hero-stat strong {
+      color: var(--text-white);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.35rem;
+      line-height: 1.2;
+    }
+
+    .catalog-hero-stat span {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+    }
+
+    .catalog-tools {
+      position: relative;
+      z-index: 3;
+      margin-bottom: 3rem;
+      padding: 1.2rem;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      background: rgba(7, 16, 30, 0.82);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
+      backdrop-filter: blur(18px);
+    }
+
+    .catalog-tools-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .catalog-tools-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      color: var(--text-white);
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+
+    .catalog-tools-title i {
+      color: var(--blue-light);
+    }
+
+    .catalog-result-count {
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      text-align: right;
+    }
+
+    .catalog-tools-controls {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(230px, 0.45fr);
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .catalog-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      overflow: visible;
+      padding: 0;
+    }
+
+    .catalog-filter-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.48rem;
+      min-height: 38px;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid var(--border-blue);
+      border-radius: var(--radius-pill);
+      background: rgba(10, 20, 38, 0.78);
+      color: var(--text-secondary);
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.76rem;
+      font-weight: 700;
+      transition-duration: 420ms;
+      transition-property: transform, border-color, color, background, box-shadow;
+    }
+
+    .catalog-filter-button i {
+      color: var(--blue-light);
+      transition: transform 480ms var(--catalog-ease), color 420ms var(--catalog-ease);
+    }
+
+    .catalog-filter-button:hover {
+      transform: translateY(-1px);
+      border-color: var(--blue-light);
+      color: var(--text-white);
+    }
+
+    .catalog-filter-button:hover i {
+      transform: rotate(-5deg) scale(1.06);
+    }
+
+    .catalog-filter-button[aria-pressed="true"] {
+      border-color: var(--blue-electric);
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.35), rgba(6, 182, 212, 0.12));
+      box-shadow: 0 0 18px rgba(59, 130, 246, 0.2);
+      color: var(--text-white);
+    }
+
+    .catalog-filter-button[aria-pressed="true"] i {
+      color: #8DDAC9;
+    }
+
+    .catalog-search {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      min-height: 44px;
+      padding: 0 0.8rem;
+      border: 1px solid rgba(148, 163, 184, 0.23);
+      border-radius: var(--radius-pill);
+      background: rgba(3, 7, 14, 0.72);
+      color: var(--text-muted);
+      transition: border-color 420ms var(--catalog-ease), box-shadow 420ms var(--catalog-ease);
+    }
+
+    .catalog-search:focus-within {
+      border-color: var(--blue-light);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.13);
+    }
+
+    .catalog-search > i {
+      color: var(--blue-light);
+    }
+
+    .catalog-search input {
+      width: 100%;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      color: var(--text-white);
+      font: inherit;
+      font-size: 0.82rem;
+    }
+
+    .catalog-search input::placeholder {
+      color: #8493A8;
+    }
+
+    .catalog-search button {
+      display: grid;
+      width: 30px;
+      height: 30px;
+      flex: 0 0 auto;
+      place-items: center;
+      border: 0;
+      border-radius: 50%;
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: background 420ms var(--catalog-ease), color 420ms var(--catalog-ease), transform 500ms var(--catalog-ease);
+    }
+
+    .catalog-search button:hover {
+      transform: rotate(90deg);
+      background: rgba(250, 93, 80, 0.16);
+      color: var(--coral-bright);
+    }
+
+    .catalog-no-results {
+      margin: -1rem auto 3rem;
+      padding: 2.5rem 1rem;
+      border: 1px dashed var(--border-blue);
+      border-radius: var(--radius-lg);
+      color: var(--text-secondary);
+      text-align: center;
+    }
+
+    .catalog-no-results i {
+      display: block;
+      margin-bottom: 0.75rem;
+      color: var(--blue-light);
+      font-size: 1.5rem;
+    }
+
+    .catalog-category {
+      scroll-margin-top: 110px;
+      margin: 0 0 4.5rem;
+    }
+
+    .catalog-category-heading {
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 0 0 1rem;
+    }
+
+    .catalog-category-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .catalog-category-icon {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      flex: 0 0 auto;
+      place-items: center;
+      border: 1px solid rgba(96, 165, 250, 0.35);
+      border-radius: 15px;
+      background: linear-gradient(145deg, rgba(37, 99, 235, 0.32), rgba(6, 182, 212, 0.1));
+      box-shadow: var(--glow-blue-sm);
+      color: #A8D4FF;
+      font-size: 1.1rem;
+    }
+
+    .catalog-count {
+      padding: 0.4rem 0.7rem;
+      border: 1px solid var(--border-blue);
+      border-radius: var(--radius-pill);
+      background: rgba(37, 99, 235, 0.1);
+    }
+
+    .catalog-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.15rem;
+    }
+
+    .catalog-card[hidden],
+    .catalog-category[hidden] {
+      display: none;
+    }
+
+    .catalog-card {
+      overflow: hidden;
+      padding: 0 1.25rem 1.25rem;
+      border-radius: 20px;
+      background: linear-gradient(160deg, rgba(16, 32, 57, 0.9), rgba(7, 15, 28, 0.96));
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.27), inset 0 1px 0 rgba(255, 255, 255, 0.035);
+      transition: transform 480ms var(--catalog-ease), border-color 480ms var(--catalog-ease), background 480ms var(--catalog-ease), box-shadow 550ms var(--catalog-ease);
+    }
+
+    .catalog-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 24px 44px rgba(0, 0, 0, 0.36), 0 0 22px rgba(37, 99, 235, 0.13);
+    }
+
+    .catalog-card-art {
+      position: relative;
+      height: 148px;
+      overflow: hidden;
+      margin: 0 -1.25rem 1.1rem;
+      background: linear-gradient(135deg, #16376D, #10182D);
+      isolation: isolate;
+    }
+
+    .catalog-card-art::after {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(3, 7, 14, 0.04) 20%, rgba(3, 7, 14, 0.4));
+      content: "";
+      pointer-events: none;
+    }
+
+    .catalog-card-art img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 850ms var(--catalog-ease), filter 700ms var(--catalog-ease);
+    }
+
+    .catalog-card:hover .catalog-card-art img {
+      transform: scale(1.045);
+      filter: saturate(1.18);
+    }
+
+    .catalog-card-icon {
+      position: absolute;
+      z-index: 1;
+      right: 0.8rem;
+      bottom: 0.75rem;
+      display: grid;
+      width: 43px;
+      height: 43px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 14px;
+      background: rgba(5, 13, 26, 0.76);
+      box-shadow: 0 7px 22px rgba(0, 0, 0, 0.28);
+      color: #A9D6FF;
+      font-size: 1rem;
+      backdrop-filter: blur(12px);
+      transition: transform 500ms var(--catalog-ease), color 450ms var(--catalog-ease), background 450ms var(--catalog-ease);
+    }
+
+    .catalog-card:hover .catalog-card-icon {
+      transform: translateY(-2px) rotate(-4deg) scale(1.04);
+      background: rgba(37, 99, 235, 0.6);
+      color: #FFFFFF;
+    }
+
+    .catalog-card h3 {
+      min-height: 2.7em;
+      margin-bottom: 0.65rem;
+      font-size: 1.05rem;
+    }
+
+    .catalog-price {
+      margin-bottom: 0.75rem;
+      border-color: rgba(96, 165, 250, 0.3);
+      background: rgba(37, 99, 235, 0.16);
+      color: #B7D9FF;
+    }
+
+    .catalog-description {
+      font-size: 0.84rem;
+    }
+
+    .catalog-card details {
+      margin: 0 0 1rem;
+      border-top-color: rgba(148, 163, 184, 0.15);
+      padding-top: 0.8rem;
+    }
+
+    .catalog-card summary {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      min-height: 32px;
+      list-style: none;
+      color: var(--blue-sky);
+      transition: color 420ms var(--catalog-ease);
+    }
+
+    .catalog-card summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .catalog-summary-icon {
+      display: grid;
+      width: 25px;
+      height: 25px;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(59, 130, 246, 0.14);
+      color: var(--blue-light);
+      transition: transform 480ms var(--catalog-ease), background 480ms var(--catalog-ease);
+    }
+
+    .catalog-summary-chevron {
+      margin-left: auto;
+      transition: transform 420ms var(--catalog-ease);
+    }
+
+    .catalog-card details[open] summary {
+      color: #FFFFFF;
+    }
+
+    .catalog-card details[open] .catalog-summary-icon {
+      transform: rotate(-12deg);
+      background: rgba(250, 93, 80, 0.2);
+      color: var(--coral-bright);
+    }
+
+    .catalog-card details[open] .catalog-summary-chevron {
+      transform: rotate(180deg);
+    }
+
+    .catalog-features {
+      animation: catalog-reveal 440ms var(--catalog-ease) both;
+    }
+
+    .catalog-features li::before {
+      top: 0.48em;
+      width: 7px;
+      height: 7px;
+      background: #64DDB8;
+      box-shadow: 0 0 10px rgba(100, 221, 184, 0.45);
+    }
+
+    .catalog-quote {
+      min-height: 44px;
+      border-color: rgba(96, 165, 250, 0.33);
+      color: var(--text-white);
+      transition: transform 420ms var(--catalog-ease), border-color 420ms var(--catalog-ease), background 420ms var(--catalog-ease), box-shadow 500ms var(--catalog-ease);
+    }
+
+    .catalog-quote i {
+      color: var(--blue-light);
+      transition: transform 460ms var(--catalog-ease), color 420ms var(--catalog-ease);
+    }
+
+    .catalog-quote:hover {
+      transform: translateY(-1px);
+      border-color: var(--blue-light);
+      background: rgba(37, 99, 235, 0.15);
+      box-shadow: var(--glow-blue-sm);
+    }
+
+    .catalog-quote:hover i {
+      transform: translateX(4px);
+      color: #FFFFFF;
+    }
+
+    .catalog-terms {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(16, 39, 77, 0.84), rgba(10, 20, 38, 0.9));
+    }
+
+    .catalog-terms::after {
+      position: absolute;
+      top: -50px;
+      right: -42px;
+      color: rgba(96, 165, 250, 0.11);
+      content: "\f05a";
+      font-family: "Font Awesome 6 Free";
+      font-size: 8rem;
+      font-weight: 900;
+      pointer-events: none;
+    }
+
+    .catalog-bottom {
+      margin-bottom: 1rem;
+      padding: 2rem 1rem 5rem;
+      border-top: 1px solid var(--border-card);
+    }
+
+    .catalog-bottom p {
+      max-width: 620px;
+    }
+
+    @keyframes catalog-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    @keyframes catalog-reveal {
+      from { opacity: 0; transform: translateY(3px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 1050px) {
+      .catalog-tools-controls {
+        grid-template-columns: 1fr;
+      }
+
+      .catalog-search {
+        max-width: 520px;
+      }
+
+      .catalog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .catalog-hero {
+        padding-top: 3rem;
+      }
+
+      .catalog-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+
+      .catalog-hero-copy {
+        text-align: center;
+      }
+
+      .catalog-hero .section-tag {
+        justify-content: center;
+      }
+
+      .catalog-hero h1,
+      .catalog-hero p {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .catalog-hero-actions,
+      .catalog-hero-stats {
+        justify-content: center;
+      }
+
+      .catalog-hero-art {
+        width: min(100%, 470px);
+        margin: 0 auto;
+      }
+
+      .catalog-hero-art img {
+        max-height: 290px;
+        object-fit: contain;
+      }
+
+      .catalog-hero-chip {
+        right: 2%;
+        bottom: 2%;
+        font-size: 0.72rem;
+      }
+
+      .catalog-tools {
+        margin-bottom: 2.5rem;
+        padding: 1rem;
+      }
+
+      .catalog-tools-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+
+      .catalog-result-count {
+        text-align: left;
+      }
+
+      .catalog-filter-button {
+        min-height: 36px;
+        padding: 0.45rem 0.65rem;
+        font-size: 0.72rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .catalog-header-inner {
+        min-height: 66px;
+      }
+
+      .catalog-hero h1 {
+        font-size: clamp(2.15rem, 11vw, 3rem);
+      }
+
+      .catalog-hero-stats {
+        gap: 1.1rem;
+      }
+
+      .catalog-hero-stat strong {
+        font-size: 1.15rem;
+      }
+
+      .catalog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .catalog-category-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+
+      .catalog-category-title-wrap {
+        align-items: flex-start;
+        gap: 0.7rem;
+      }
+
+      .catalog-category-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 13px;
+        font-size: 0.95rem;
+      }
+
+      .catalog-category-heading h2 {
+        font-size: 1.28rem;
+      }
+
+      .catalog-count {
+        margin-left: 48px;
+        font-size: 0.68rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body class="catalog-page">
+  <div class="ambient-glow-wrapper" aria-hidden="true">
+    <div class="ambient-orb orb-top-center"></div>
+    <div class="ambient-orb orb-mid-left"></div>
+    <div class="ambient-orb orb-mid-right"></div>
+    <div class="ambient-orb orb-bottom-center"></div>
+  </div>
+  <div class="cyber-grid-overlay" aria-hidden="true"></div>
+
+  <header class="catalog-header">
+    <div class="container catalog-header-inner">
+      <a href="index.html#inicio" class="brand-logo" aria-label="Servi Maxs, volver al inicio">
+        <span class="brand-badge-squircle">
+          <img src="assets/logo-symbol.png" alt="" width="38" height="38">
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Servi<span class="brand-alcance">Maxs</span></span>
+          <span class="brand-tagline"><span class="dot-coral"></span> Soluciones Digitales</span>
+        </span>
+      </a>
+      <div class="catalog-header-actions">
+        <a class="catalog-header-link" href="index.html#inicio">Inicio</a>
+        <a class="btn btn-primary btn-sm" href="index.html#contacto">
+          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Cotizar
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="catalog-hero">
+      <div class="container catalog-hero-grid">
+        <div class="catalog-hero-copy reveal">
+          <span class="section-tag"><i class="fa-solid fa-sparkles" aria-hidden="true"></i> Catálogo comercial Servi Maxs</span>
+          <h1>Ideas digitales que <span>impulsan</span> tu negocio</h1>
+          <p>Explora soluciones hechas para crecer contigo: desde una web profesional hasta sistemas, inteligencia artificial y automatización. Encuentra el punto de partida y conversemos sobre el alcance ideal.</p>
+          <div class="catalog-hero-actions">
+            <a class="btn btn-primary" href="#catalogTools">
+              <i class="fa-solid fa-compass" aria-hidden="true"></i> Explorar soluciones
+            </a>
+            <a class="btn btn-secondary" href="index.html#contacto">
+              <i class="fa-regular fa-comments" aria-hidden="true"></i> Hablar con un asesor
+            </a>
+          </div>
+          <div class="catalog-hero-stats" aria-label="Resumen del catálogo">
+            <div class="catalog-hero-stat">
+              <strong id="catalogTotal">91</strong>
+              <span>servicios disponibles</span>
+            </div>
+            <div class="catalog-hero-stat">
+              <strong>9</strong>
+              <span>categorías para explorar</span>
+            </div>
+            <div class="catalog-hero-stat">
+              <strong>COP</strong>
+              <span>precios desde valores iniciales</span>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-hero-art reveal">
+          <img src="assets/catalog/hero.svg" alt="" width="720" height="500" fetchpriority="high">
+          <span class="catalog-hero-chip"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Tecnología a tu medida</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="container catalog-tools reveal" id="catalogTools" aria-label="Buscar y filtrar servicios">
+      <div class="catalog-tools-heading">
+        <span class="catalog-tools-title"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Encuentra tu solución</span>
+        <span class="catalog-result-count" id="catalogResultCount" aria-live="polite"></span>
+      </div>
+      <div class="catalog-tools-controls">
+        <nav class="catalog-nav" id="catalogNav" aria-label="Filtrar por categoría"></nav>
+        <label class="catalog-search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <input id="catalogSearch" type="search" placeholder="Buscar un servicio..." aria-label="Buscar servicios por nombre o descripción">
+          <button type="button" id="clearSearch" aria-label="Limpiar búsqueda" title="Limpiar búsqueda">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+        </label>
+      </div>
+    </section>
+    <p class="container catalog-no-results" id="catalogNoResults" hidden>
+      <i class="fa-regular fa-face-meh" aria-hidden="true"></i>
+      No encontramos servicios con esa búsqueda. Prueba con otra palabra.
+    </p>
+    <div class="container catalog-content" id="catalogContent"></div>
+
+    <section class="container catalog-bottom reveal">
+      <p>¿No encuentras exactamente lo que necesitas? Cuéntanos tu idea y diseñaremos una propuesta a tu medida.</p>
+      <a class="btn btn-primary" href="index.html#contacto">
+        <i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i> Solicitar una cotización
+      </a>
+    </section>
+  </main>
+
+  <script>
+    const catalog = [
+      {
+        id: "diseno-web",
+        title: "Desarrollo y diseño web",
+        items: [
+          { name: "Web esencial", price: "Desde $890.000 COP", description: "Una solución sencilla para negocios que necesitan mostrar su información y facilitar el contacto con sus clientes.", features: ["Una página con hasta 4 secciones", "Desarrollo sobre componentes ya construidos", "Botón de WhatsApp y datos de contacto", "Diseño optimizado para dispositivos móviles", "Tú entregas los textos y las fotografías"] },
+          { name: "Landing page", price: "Desde $1.800.000 COP", description: "Una página para promocionar un producto, servicio o campaña y convertir visitas en contactos o solicitudes.", features: ["Una página de desplazamiento vertical", "Diseño personalizado según tu marca", "Secciones estratégicas para presentar tu oferta", "Formulario de contacto", "Botón directo de WhatsApp", "Optimización básica para buscadores", "Diseño adaptable a celulares y computadores"] },
+          { name: "Sitio corporativo", price: "Desde $3.500.000 COP", description: "Una presencia digital profesional para presentar tus servicios, fortalecer tu imagen y dar a conocer tu negocio.", features: ["De 5 a 8 páginas o secciones", "Diseño personalizado", "Inicio, servicios, nosotros y contacto", "Formularios de contacto", "Integración con WhatsApp", "SEO básico", "Sitemap y Search Console configurados", "Diseño adaptable a dispositivos móviles"] },
+          { name: "Tienda online", price: "Desde $5.500.000 COP", description: "Una tienda virtual para que tus clientes exploren un catálogo y realicen pedidos por internet.", features: ["Catálogo de hasta 100 productos", "Carrito de compras y proceso de pago", "Integración de una o dos pasarelas de pago", "Configuración de métodos de envío", "Registro y gestión de pedidos", "Panel de administración", "Capacitación para administrar la tienda"] },
+          { name: "Página de portafolio", price: "Desde $1.200.000 COP", description: "Muestra tus trabajos, proyectos y experiencia en un solo lugar; ideal para profesionales y empresas de servicios.", features: ["Página de presentación profesional", "Galería de proyectos y trabajos", "Información de servicios", "Datos de contacto", "Integración con redes sociales", "Diseño adaptable a dispositivos móviles"] },
+          { name: "Página de reservas", price: "Desde $1.800.000 COP", description: "Facilita que tus clientes soliciten citas y servicios sin depender exclusivamente de llamadas o mensajes manuales.", features: ["Calendario de reservas", "Formulario de solicitud de citas", "Registro de clientes", "Selección de servicios y horarios", "Notificaciones según integración disponible", "Panel básico de administración"] },
+          { name: "Página de eventos", price: "Desde $1.500.000 COP", description: "Promociona eventos, conferencias, capacitaciones o actividades y permite que los interesados consulten la información y se inscriban.", features: ["Presentación del evento", "Fecha, horario y ubicación", "Formulario de inscripción", "Información de organizadores", "Integración con WhatsApp", "Diseño adaptable"] },
+          { name: "Catálogo digital", price: "Desde $900.000 COP", description: "Presenta tus productos y servicios de forma organizada, sin implementar una tienda virtual completa.", features: ["Catálogo de productos o servicios", "Fotografías y descripciones", "Clasificación por categorías", "Botones de consulta por WhatsApp", "Información comercial", "Diseño adaptable a celulares"] },
+          { name: "Página institucional", price: "Desde $2.500.000 COP", description: "Una plataforma informativa para organizaciones, fundaciones e instituciones que necesitan comunicar sus actividades y objetivos.", features: ["Presentación institucional", "Información de la organización", "Sección de programas y proyectos", "Galería multimedia", "Información de contacto", "Diseño adaptable"] }
+        ]
+      },
+      {
+        id: "software-medida",
+        title: "Desarrollo de software a medida",
+        note: "Estos proyectos se cotizan de forma personalizada, porque las funcionalidades y la complejidad dependen de cada necesidad.",
+        items: [
+          { name: "Aplicaciones web", price: "Cotización personalizada", description: "Digitaliza las actividades de tu negocio con aplicaciones que funcionan desde un navegador y gestionan información desde diferentes dispositivos.", features: ["Desarrollo según tus necesidades", "Interfaz personalizada", "Gestión de usuarios", "Conexión con bases de datos", "Módulos administrativos", "Diseño adaptable"] },
+          { name: "Software empresarial", price: "Cotización personalizada", description: "Organiza los procesos de tu empresa mediante un sistema centralizado para administrar información y operaciones.", features: ["Módulos según los procesos del negocio", "Administración de información", "Gestión de usuarios y permisos", "Consultas y reportes", "Bases de datos", "Funcionalidades personalizadas"] },
+          { name: "Software personalizado", price: "Cotización personalizada", description: "Un programa adaptado a tus requerimientos cuando una idea o proceso no se resuelve con herramientas tradicionales.", features: ["Análisis de requerimientos", "Diseño de funcionalidades", "Desarrollo a medida", "Pruebas del sistema", "Implementación", "Documentación básica"] },
+          { name: "Plataformas digitales", price: "Cotización personalizada", description: "Un espacio digital donde tus usuarios pueden registrarse, consultar información e interactuar con los servicios de tu empresa.", features: ["Registro e inicio de sesión", "Perfiles de usuarios", "Panel de administración", "Gestión de contenidos", "Bases de datos", "Módulos personalizados"] },
+          { name: "Portales empresariales", price: "Cotización personalizada", description: "Centraliza la comunicación y los servicios para clientes, colaboradores o proveedores con acceso según sus permisos.", features: ["Acceso mediante usuarios", "Perfiles y permisos", "Consulta de información", "Gestión de solicitudes", "Panel administrativo", "Funcionalidades específicas"] },
+          { name: "Sistemas de reservas", price: "Cotización personalizada", description: "Organiza las citas, horarios y solicitudes de tus clientes y controla la disponibilidad desde una plataforma.", features: ["Gestión de horarios", "Registro de reservas", "Administración de clientes", "Control de disponibilidad", "Estados de las reservas", "Reportes básicos"] },
+          { name: "Sistemas de inscripción", price: "Cotización personalizada", description: "Simplifica el registro de participantes para instituciones, empresas, cursos y eventos.", features: ["Formularios de inscripción", "Registro de participantes", "Gestión de información", "Consulta de registros", "Panel administrativo", "Reportes de participantes"] },
+          { name: "Plataformas educativas", price: "Cotización personalizada", description: "Administra cursos, estudiantes y recursos de aprendizaje desde un entorno digital para organizaciones educativas.", features: ["Registro de estudiantes", "Gestión de cursos", "Publicación de contenidos", "Seguimiento de actividades", "Panel de docentes y administradores", "Reportes académicos"] },
+          { name: "Sistemas de reportes", price: "Cotización personalizada", description: "Organiza los datos de tu empresa para facilitar el seguimiento de actividades y la toma de decisiones.", features: ["Consulta de información", "Tablas y gráficos", "Filtros de búsqueda", "Reportes personalizados", "Exportación de información según alcance", "Panel de indicadores"] },
+          { name: "Aplicaciones administrativas", price: "Cotización personalizada", description: "Facilita el registro, la consulta y el control de información y tareas internas de tu empresa.", features: ["Módulos administrativos", "Registro de operaciones", "Gestión de información", "Usuarios y permisos", "Consultas y reportes", "Funcionalidades personalizadas"] },
+          { name: "Integración y desarrollo de API", price: "Cotización personalizada", description: "Conecta aplicaciones y plataformas para permitir el intercambio de información entre tus sistemas.", features: ["Análisis de integración", "Desarrollo de servicios API", "Conexión entre plataformas compatibles", "Intercambio de información", "Validación de datos", "Pruebas de funcionamiento"] }
+        ]
+      },
+      {
+        id: "sistemas-empresariales",
+        title: "Sistemas empresariales y administrativos",
+        items: [
+          { name: "CRM empresarial", price: "Desde $1.800.000 COP", description: "Administra clientes, organiza oportunidades comerciales y realiza seguimiento de tus ventas desde un solo lugar.", features: ["Registro de clientes", "Historial de interacciones", "Seguimiento de oportunidades", "Gestión de contactos", "Panel de ventas", "Reportes comerciales"] },
+          { name: "Sistema de inventarios", price: "Desde $2.000.000 COP", description: "Lleva un mejor control de tus productos y existencias, consulta movimientos y organiza la información del inventario.", features: ["Registro de productos", "Entradas y salidas", "Control de existencias", "Clasificación por categorías", "Alertas de inventario según configuración", "Reportes de movimientos"] },
+          { name: "Sistema de ventas", price: "Desde $1.800.000 COP", description: "Registra y organiza las ventas de tu negocio para tener mayor control de las operaciones comerciales.", features: ["Registro de ventas", "Gestión de productos", "Historial de transacciones", "Información de clientes", "Consulta de ventas", "Reportes básicos"] },
+          { name: "Sistema administrativo", price: "Desde $2.500.000 COP", description: "Centraliza la información de tu negocio y facilita la administración de sus principales actividades.", features: ["Gestión de registros", "Administración de información", "Usuarios y permisos", "Módulos según necesidades", "Consultas y reportes", "Panel de administración"] },
+          { name: "ERP personalizado", price: "Desde $5.500.000 COP", description: "Integra áreas de tu empresa en un sistema para administrar procesos, compartir información y mejorar el control operativo.", features: ["Módulos empresariales integrados", "Gestión de compras y ventas", "Administración de inventarios", "Gestión de clientes y proveedores", "Usuarios y permisos", "Reportes empresariales"] },
+          { name: "Gestión de empleados", price: "Desde $1.800.000 COP", description: "Organiza la información de tus colaboradores y facilita el seguimiento de los registros administrativos del personal.", features: ["Registro de empleados", "Perfiles y datos laborales", "Organización de información", "Consulta de registros", "Gestión de documentos según alcance", "Reportes administrativos"] },
+          { name: "Gestión de proveedores", price: "Desde $1.200.000 COP", description: "Mantén organizada la información de tus proveedores y facilita el seguimiento de relaciones comerciales y compras.", features: ["Registro de proveedores", "Datos de contacto", "Historial de compras", "Clasificación de proveedores", "Consulta de registros", "Reportes básicos"] },
+          { name: "Sistema de pedidos", price: "Desde $1.500.000 COP", description: "Organiza los pedidos de tus clientes y consulta su estado para facilitar el seguimiento de cada solicitud.", features: ["Registro de pedidos", "Información de clientes", "Detalle de productos", "Seguimiento de estados", "Historial de solicitudes", "Panel administrativo"] },
+          { name: "Sistema de facturación", price: "Desde $2.000.000 COP", description: "Organiza la facturación y consulta de documentos comerciales con una solución adaptada a tu empresa.", features: ["Registro de clientes", "Gestión de documentos", "Registro de productos y servicios", "Consulta de facturas", "Reportes de operaciones", "Posible integración con proveedor tecnológico autorizado, según alcance"] },
+          { name: "Panel de indicadores", price: "Desde $1.500.000 COP", description: "Visualiza datos importantes de tu empresa mediante gráficos e indicadores para analizar resultados.", features: ["Indicadores personalizados", "Gráficos estadísticos", "Tablas de información", "Filtros de consulta", "Visualización de tendencias", "Conexión con fuentes de datos acordadas"] },
+          { name: "Gestión documental", price: "Desde $1.800.000 COP", description: "Organiza documentos digitales y facilita su almacenamiento, clasificación y consulta desde una plataforma centralizada.", features: ["Registro de documentos", "Clasificación por categorías", "Búsqueda y consulta", "Organización de archivos", "Usuarios y permisos", "Gestión de documentos según alcance"] },
+          { name: "Sistema de cartera", price: "Desde $2.000.000 COP", description: "Realiza seguimiento organizado de cuentas por cobrar, pagos y compromisos financieros de tus clientes.", features: ["Registro de clientes", "Control de cuentas pendientes", "Registro de pagos", "Seguimiento de vencimientos", "Historial de movimientos", "Reportes de cartera"] }
+        ]
+      },
+      {
+        id: "chatbots",
+        title: "Chatbots y asistentes virtuales",
+        items: [
+          { name: "Chatbot básico", price: "Desde $850.000 COP", description: "Atiende las consultas más frecuentes mediante respuestas y opciones automáticas que facilitan la comunicación con tu negocio.", features: ["Menú de opciones", "Respuestas predefinidas", "Preguntas frecuentes", "Información de servicios", "Enlace de contacto con un asesor", "Integración con un canal compatible"] },
+          { name: "Chatbot con inteligencia artificial", price: "Desde $1.800.000 COP", description: "Un asistente capaz de interpretar preguntas y responder utilizando la información de tu empresa.", features: ["Integración con un modelo de IA", "Base de conocimiento empresarial", "Respuestas contextualizadas", "Atención de preguntas frecuentes", "Configuración de instrucciones", "Derivación a un asesor"] },
+          { name: "Chatbot para WhatsApp", price: "Desde $1.500.000 COP", description: "Automatiza parte de la atención mediante conversaciones organizadas para responder consultas y recibir solicitudes.", features: ["Configuración de conversaciones", "Menús de atención", "Respuestas automáticas", "Captura de información", "Integración mediante API oficial o proveedor compatible", "Transferencia a un asesor según configuración"] },
+          { name: "Chatbot web", price: "Desde $900.000 COP", description: "Incorpora un asistente en tu página para orientar a visitantes y responder preguntas sobre tus productos o servicios.", features: ["Widget de conversación", "Preguntas frecuentes", "Respuestas configuradas", "Información comercial", "Diseño integrado con tu página", "Enlace a atención humana"] },
+          { name: "Chatbot multicanal", price: "Desde $2.500.000 COP", description: "Centraliza conversaciones compatibles y organiza la atención de tus clientes desde diferentes canales digitales.", features: ["Integración de dos o más canales", "Configuración de respuestas", "Flujos de conversación", "Organización de consultas", "Captura de datos", "Derivación a personal de atención"] },
+          { name: "Chatbot de ventas", price: "Desde $1.800.000 COP", description: "Ayuda a tus clientes a conocer productos y servicios, resolver dudas y avanzar en el proceso de compra.", features: ["Presentación de productos", "Respuestas comerciales", "Captura de clientes potenciales", "Preguntas de calificación", "Enlaces de compra o contacto", "Derivación a un asesor"] },
+          { name: "Chatbot de reservas", price: "Desde $1.500.000 COP", description: "Facilita la recepción de solicitudes de citas y reservas mediante conversaciones automatizadas.", features: ["Consulta de servicios", "Recepción de solicitudes", "Selección de horarios disponibles si se integra un calendario", "Registro de clientes", "Confirmaciones según configuración", "Integración con herramientas compatibles"] },
+          { name: "Chatbot de soporte", price: "Desde $1.800.000 COP", description: "Facilita solicitudes de ayuda y proporciona información útil para resolver dudas frecuentes.", features: ["Base de preguntas frecuentes", "Respuestas automatizadas", "Clasificación de solicitudes", "Registro de consultas", "Derivación a soporte humano", "Seguimiento según integraciones disponibles"] }
+        ]
+      },
+      {
+        id: "agentes-ia",
+        title: "Agentes de inteligencia artificial",
+        items: [
+          { name: "Agente IA de atención", price: "Desde $2.900.000 COP", description: "Un asistente inteligente que consulta información empresarial y atiende preguntas de tus clientes de manera contextualizada.", features: ["Agente con instrucciones personalizadas", "Base de conocimiento", "Interpretación de consultas", "Respuestas contextualizadas", "Integración con un canal compatible", "Derivación a atención humana"] },
+          { name: "Agente IA de ventas", price: "Desde $3.900.000 COP", description: "Optimiza la gestión comercial: identifica necesidades, recopila información y organiza oportunidades de venta.", features: ["Atención de clientes potenciales", "Identificación de necesidades", "Captura de información comercial", "Clasificación de oportunidades", "Integración con CRM compatible", "Seguimiento según configuración"] },
+          { name: "Agente IA de reservas", price: "Desde $3.500.000 COP", description: "Facilita la programación de citas mediante consulta de disponibilidad y gestión de solicitudes con un calendario compatible.", features: ["Atención de solicitudes", "Consulta de disponibilidad", "Registro de citas", "Integración con calendarios", "Confirmaciones automatizadas", "Gestión de información"] },
+          { name: "Agente IA empresarial", price: "Desde $5.500.000 COP", description: "Integra inteligencia artificial en procesos empresariales para consultar información y ejecutar tareas mediante herramientas autorizadas.", features: ["Agente personalizado", "Integración con sistemas compatibles", "Consulta de información empresarial", "Ejecución de tareas autorizadas", "Gestión de instrucciones", "Registro de interacciones"] },
+          { name: "Agente IA para documentos", price: "Desde $3.500.000 COP", description: "Busca información en documentos empresariales y responde preguntas con base en las fuentes proporcionadas.", features: ["Incorporación de documentos", "Organización de fuentes", "Búsqueda de información", "Respuestas basadas en documentos", "Referencias a fuentes disponibles según implementación", "Gestión de acceso"] },
+          { name: "Agente IA para soporte interno", price: "Desde $3.500.000 COP", description: "Ayuda a los colaboradores a consultar procedimientos, documentos y conocimientos internos desde un asistente centralizado.", features: ["Base de conocimiento interna", "Consultas de procedimientos", "Respuestas contextualizadas", "Organización de información", "Control de acceso según configuración", "Integración con herramientas compatibles"] },
+          { name: "Agente IA para comercio", price: "Desde $3.900.000 COP", description: "Mejora la experiencia de compra y orienta a los usuarios en la búsqueda y selección de productos.", features: ["Consulta de catálogo", "Búsqueda de productos", "Respuestas sobre características", "Recomendaciones según criterios configurados", "Integración con catálogo compatible", "Orientación hacia la compra"] }
+        ]
+      },
+      {
+        id: "automatizacion",
+        title: "Automatización de procesos empresariales",
+        items: [
+          { name: "Automatización básica", price: "Desde $450.000 COP", description: "Automatiza una tarea sencilla para ahorrar tiempo y organizar mejor la información.", features: ["Automatización de una tarea", "Configuración de condiciones sencillas", "Conexión de herramientas compatibles", "Pruebas de funcionamiento"] },
+          { name: "Automatización intermedia", price: "Desde $900.000 COP", description: "Conecta varias actividades para que la información pase automáticamente de una herramienta a otra.", features: ["Flujo de hasta tres etapas", "Integración de herramientas compatibles", "Registro automático de información", "Notificaciones", "Pruebas y documentación básica"] },
+          { name: "Automatización avanzada", price: "Desde $1.800.000 COP", description: "Optimiza procesos con diferentes pasos, condiciones y conexiones entre aplicaciones.", features: ["Flujos de múltiples etapas", "Integración con CRM", "Notificaciones automáticas", "Registro y actualización de información", "Condiciones y validaciones", "Manejo básico de errores"] },
+          { name: "Automatización empresarial", price: "Desde $3.500.000 COP", description: "Conecta procesos de tu empresa para optimizar operaciones y reducir actividades manuales.", features: ["Integración de diferentes sistemas", "Automatización de procesos internos", "Flujos de aprobación", "Gestión de información", "Reportes automáticos", "Pruebas y documentación"] },
+          { name: "Automatización de correos", price: "Desde $450.000 COP", description: "Organiza el envío de mensajes y notificaciones para comunicarte mejor con clientes y colaboradores.", features: ["Configuración de correos automáticos", "Plantillas de mensajes", "Disparadores de envío", "Notificaciones", "Integración con herramientas compatibles"] },
+          { name: "Automatización de formularios", price: "Desde $450.000 COP", description: "Recibe información mediante formularios y automatiza su registro, organización y distribución.", features: ["Configuración del formulario", "Captura de información", "Registro automático de datos", "Notificaciones", "Conexión con hojas de cálculo o herramientas compatibles"] },
+          { name: "Automatización de ventas", price: "Desde $900.000 COP", description: "Organiza el seguimiento comercial y facilita el registro de clientes potenciales y oportunidades.", features: ["Registro automático de interesados", "Actualización de oportunidades", "Notificaciones comerciales", "Seguimiento de clientes", "Integración con CRM compatible"] },
+          { name: "Automatización de inventarios", price: "Desde $1.200.000 COP", description: "Facilita el control de productos con actualizaciones automáticas y notificaciones de movimientos.", features: ["Actualización de existencias", "Registro de movimientos", "Notificaciones de niveles configurados", "Integración con sistemas compatibles", "Reportes de inventario"] },
+          { name: "Automatización de reportes", price: "Desde $900.000 COP", description: "Reduce el trabajo manual de recopilar información mediante la generación y distribución automática de informes.", features: ["Recopilación de información", "Generación de reportes", "Organización de datos", "Envío automático", "Programación de tareas"] },
+          { name: "Automatización administrativa", price: "Desde $900.000 COP", description: "Digitaliza actividades repetitivas y facilita el seguimiento de tareas y procesos internos.", features: ["Automatización de tareas", "Registro de información", "Notificaciones internas", "Flujos de aprobación", "Integración de herramientas compatibles"] },
+          { name: "Integración de aplicaciones", price: "Desde $350.000 COP", description: "Conecta tus herramientas digitales para que compartan información y trabajen de manera coordinada.", features: ["Análisis de compatibilidad", "Configuración de conexión", "Integración de aplicaciones", "Transferencia de información", "Pruebas de funcionamiento"] },
+          { name: "Automatización de notificaciones", price: "Desde $450.000 COP", description: "Informa a clientes o colaboradores mediante avisos automáticos cuando ocurren determinados eventos.", features: ["Configuración de alertas", "Definición de eventos", "Envío de notificaciones", "Integración con canales compatibles", "Pruebas de funcionamiento"] }
+        ]
+      },
+      {
+        id: "aplicaciones-moviles",
+        title: "Aplicaciones móviles",
+        note: "Los proyectos se cotizan según las plataformas, funcionalidades y complejidad.",
+        items: [
+          { name: "Aplicaciones Android", price: "Cotización personalizada", description: "Lleva los servicios de tu negocio a dispositivos Android con una aplicación diseñada para facilitar el acceso de tus usuarios.", features: ["Diseño de interfaz", "Desarrollo de funcionalidades", "Registro de usuarios según alcance", "Conexión con bases de datos", "Pruebas en dispositivos", "Preparación para publicación"] },
+          { name: "Aplicaciones iOS", price: "Cotización personalizada", description: "Desarrolla una experiencia móvil para usuarios de dispositivos Apple, adaptada a las necesidades de tu proyecto.", features: ["Diseño de interfaz", "Desarrollo de funcionalidades", "Integración con servicios", "Gestión de usuarios", "Pruebas", "Preparación para publicación"] },
+          { name: "Aplicaciones multiplataforma", price: "Cotización personalizada", description: "Desarrolla una aplicación para diferentes sistemas operativos compartiendo parte de su desarrollo.", features: ["Diseño adaptable", "Desarrollo multiplataforma", "Integración con servicios", "Gestión de usuarios", "Pruebas en diferentes dispositivos"] },
+          { name: "Aplicaciones empresariales", price: "Cotización personalizada", description: "Facilita el acceso a procesos e información de tu empresa desde dispositivos móviles.", features: ["Módulos empresariales", "Acceso de colaboradores", "Consulta de información", "Gestión de registros", "Integración con sistemas compatibles"] },
+          { name: "Aplicaciones comerciales", price: "Cotización personalizada", description: "Ofrece una experiencia móvil para consultar productos, conocer servicios y realizar solicitudes.", features: ["Catálogo de productos", "Información comercial", "Registro de usuarios", "Solicitudes y pedidos", "Integración con servicios de pago según alcance"] },
+          { name: "Aplicaciones de reservas", price: "Cotización personalizada", description: "Permite que tus clientes consulten servicios y gestionen solicitudes de citas desde sus teléfonos.", features: ["Calendario de disponibilidad", "Solicitud de reservas", "Registro de usuarios", "Historial de citas", "Notificaciones según integración"] },
+          { name: "Aplicaciones de domicilios", price: "Cotización personalizada", description: "Facilita la gestión de pedidos y entregas mediante una aplicación que conecta clientes y negocios.", features: ["Catálogo de productos", "Registro de pedidos", "Datos de entrega", "Seguimiento de estados", "Panel administrativo"] },
+          { name: "Aplicaciones educativas", price: "Cotización personalizada", description: "Lleva contenidos y herramientas de aprendizaje a dispositivos móviles mediante una experiencia accesible.", features: ["Registro de estudiantes", "Acceso a contenidos", "Organización de cursos", "Seguimiento de actividades", "Panel administrativo"] },
+          { name: "Aplicaciones con usuarios", price: "Cotización personalizada", description: "Incorpora acceso para que cada usuario gestione su perfil y consulte información personalizada.", features: ["Registro de usuarios", "Inicio de sesión", "Recuperación de contraseña", "Perfiles personalizados", "Control de permisos", "Gestión de información"] },
+          { name: "Aplicaciones conectadas a API", price: "Cotización personalizada", description: "Integra tu aplicación con otros sistemas para consultar y compartir información de manera organizada.", features: ["Conexión con API", "Intercambio de información", "Validación de datos", "Autenticación según servicio", "Pruebas de integración"] }
+        ]
+      },
+      {
+        id: "marketing-digital",
+        title: "Marketing digital y presencia en internet",
+        items: [
+          { name: "Diseño de publicaciones", price: "Cotización personalizada", description: "Comunica tus productos y servicios con piezas gráficas profesionales para las redes sociales de tu negocio.", features: ["Diseño de publicaciones", "Adaptación a formatos sociales", "Aplicación de identidad visual", "Textos comerciales básicos", "Entrega de archivos digitales"] },
+          { name: "Diseño de anuncios", price: "Cotización personalizada", description: "Presenta ofertas y servicios mediante anuncios visuales diseñados para captar la atención de posibles clientes.", features: ["Diseño publicitario", "Mensaje comercial", "Llamado a la acción", "Adaptación para Facebook e Instagram", "Entrega digital"] },
+          { name: "Gestión de redes sociales", price: "Cotización personalizada", description: "Mantén activos tus perfiles comerciales mediante una planificación organizada de publicaciones y contenidos.", features: ["Planificación de contenidos", "Calendario de publicaciones", "Diseño de piezas gráficas", "Redacción de textos", "Programación de publicaciones según plataforma"] },
+          { name: "Identidad digital", price: "Cotización personalizada", description: "Construye una imagen coherente para tu marca y transmite profesionalismo en diferentes canales digitales.", features: ["Concepto visual", "Paleta de colores", "Selección tipográfica", "Aplicaciones digitales del logotipo", "Guía visual básica"] },
+          { name: "Diseño de banners", price: "Cotización personalizada", description: "Destaca promociones, servicios y mensajes importantes con imágenes adaptadas a tu sitio web o redes sociales.", features: ["Diseño gráfico", "Adaptación de dimensiones", "Aplicación de identidad visual", "Textos promocionales", "Entrega digital"] },
+          { name: "Creación de reels", price: "Cotización personalizada", description: "Presenta tu negocio con videos cortos sobre tus productos, servicios y novedades.", features: ["Concepto del video", "Guion breve", "Edición audiovisual", "Textos y subtítulos", "Formato vertical"] },
+          { name: "Marketing para negocios", price: "Cotización personalizada", description: "Organiza la comunicación digital de tu empresa con una estrategia para dar a conocer tus servicios y atraer clientes potenciales.", features: ["Análisis del negocio", "Definición de público objetivo", "Propuesta de comunicación", "Ideas de contenido", "Plan de publicaciones"] },
+          { name: "Campañas publicitarias", price: "Cotización personalizada", description: "Configura campañas digitales para promocionar productos y servicios y llegar a públicos seleccionados.", features: ["Planeación de campaña", "Configuración de anuncios", "Segmentación de audiencia", "Seguimiento de resultados", "Recomendaciones de optimización"], note: "La inversión publicitaria se paga por separado." },
+          { name: "SEO básico", price: "Cotización personalizada", description: "Mejora la estructura de tu página para facilitar que los buscadores comprendan su contenido y la muestren en resultados relevantes.", features: ["Optimización de títulos", "Descripciones de páginas", "Estructura de encabezados", "Optimización básica de imágenes", "Configuración técnica inicial"] },
+          { name: "Optimización de perfiles comerciales", price: "Cotización personalizada", description: "Mejora la presentación de tus perfiles digitales para que tus clientes encuentren fácilmente la información de tu negocio.", features: ["Actualización de información", "Descripción comercial", "Enlaces de contacto", "Imágenes de perfil y portada", "Organización de datos comerciales"] },
+          { name: "Redacción comercial", price: "Cotización personalizada", description: "Comunica mejor lo que ofrece tu empresa con textos para presentar productos, explicar beneficios y facilitar el contacto.", features: ["Descripciones de productos", "Textos para páginas web", "Publicaciones comerciales", "Mensajes publicitarios", "Llamados a la acción"] }
+        ]
+      },
+      {
+        id: "soporte",
+        title: "Mantenimiento, soporte y servicios tecnológicos",
+        items: [
+          { name: "Mantenimiento web básico", price: "Desde $150.000 COP / mes", description: "Mantén tu página actualizada mediante revisiones y ajustes básicos para conservar su correcto funcionamiento.", features: ["Revisión general del sitio", "Actualizaciones básicas", "Verificación de enlaces", "Revisión de formularios", "Soporte técnico limitado"] },
+          { name: "Soporte estándar", price: "Desde $300.000 COP / mes", description: "Recibe acompañamiento técnico para resolver inconvenientes y mantener tus herramientas digitales en funcionamiento.", features: ["Soporte técnico remoto", "Revisión de inconvenientes", "Ajustes menores", "Orientación de uso", "Seguimiento de solicitudes"] },
+          { name: "Soporte profesional", price: "Desde $500.000 COP / mes", description: "Acompañamiento técnico más completo para atender mantenimiento y mejoras de tus sistemas.", features: ["Seguimiento técnico", "Mantenimiento preventivo", "Corrección de inconvenientes cubiertos", "Ajustes menores", "Revisión de funcionamiento"] },
+          { name: "Operación empresarial", price: "Desde $800.000 COP / mes", description: "Acompañamiento técnico para supervisar y mantener soluciones digitales e integraciones.", features: ["Supervisión de sistemas acordados", "Revisión de integraciones", "Mantenimiento", "Seguimiento de incidencias", "Mejoras limitadas según contrato"] },
+          { name: "Soporte técnico por hora", price: "Desde $50.000 COP / hora", description: "Asistencia puntual para revisar problemas, resolver dudas o realizar ajustes en tus herramientas digitales.", features: ["Diagnóstico inicial", "Asistencia remota", "Revisión de inconvenientes", "Orientación técnica", "Recomendaciones de solución"] },
+          { name: "Actualización de contenido web", price: "Desde $100.000 COP", description: "Mantén actualizada la información de tu sitio con cambios en textos, imágenes y contenido comercial.", features: ["Actualización de textos", "Reemplazo de imágenes", "Modificación de información", "Ajustes de contenido", "Revisión de visualización"] },
+          { name: "Modificación de flujo automatizado", price: "Desde $150.000 COP", description: "Ajusta una automatización existente para adaptarla a nuevos requerimientos de tu negocio.", features: ["Revisión del flujo existente", "Modificación de condiciones sencillas", "Ajuste de pasos", "Pruebas de funcionamiento"] },
+          { name: "Actualización de chatbot", price: "Desde $100.000 COP", description: "Mantén actualizadas las respuestas de tu asistente virtual con la información y novedades de tu empresa.", features: ["Actualización de respuestas", "Incorporación de preguntas frecuentes", "Modificación de opciones", "Pruebas de conversación"] },
+          { name: "Actualización de base de conocimiento IA", price: "Desde $180.000 COP", description: "Incorpora nueva información a tu asistente inteligente para mantener actualizadas sus fuentes de consulta.", features: ["Incorporación de documentos", "Actualización de información", "Organización de fuentes", "Revisión de respuestas"] },
+          { name: "Revisión técnica de automatizaciones", price: "Desde $150.000 COP", description: "Comprueba el funcionamiento de procesos automatizados y detecta inconvenientes en conexiones y configuraciones.", features: ["Revisión de flujos", "Verificación de conexiones", "Pruebas de ejecución", "Identificación de errores", "Recomendaciones técnicas"] },
+          { name: "Configuración de dominio y hosting", price: "Desde $120.000 COP", description: "Publica tu página web mediante la configuración de un dominio y un servicio de alojamiento compatible.", features: ["Configuración inicial", "Vinculación del dominio", "Configuración de alojamiento", "Verificación de publicación", "Configuración básica de HTTPS"], note: "La compra del dominio, hosting y certificados de pago, cuando apliquen, se cobra por separado." }
+        ]
+      }
+    ];
+
+    const nav = document.getElementById("catalogNav");
+    const content = document.getElementById("catalogContent");
+    const searchInput = document.getElementById("catalogSearch");
+    const clearSearchButton = document.getElementById("clearSearch");
+    const resultCount = document.getElementById("catalogResultCount");
+    const noResults = document.getElementById("catalogNoResults");
+    const categoryVisuals = {
+      "diseno-web": { image: "web.svg", icon: "fa-solid fa-laptop-code" },
+      "software-medida": { image: "software.svg", icon: "fa-solid fa-code" },
+      "sistemas-empresariales": { image: "systems.svg", icon: "fa-solid fa-chart-pie" },
+      chatbots: { image: "chatbots.svg", icon: "fa-solid fa-comments" },
+      "agentes-ia": { image: "ai.svg", icon: "fa-solid fa-robot" },
+      automatizacion: { image: "automation.svg", icon: "fa-solid fa-diagram-project" },
+      "aplicaciones-moviles": { image: "mobile.svg", icon: "fa-solid fa-mobile-screen-button" },
+      "marketing-digital": { image: "marketing.svg", icon: "fa-solid fa-bullhorn" },
+      soporte: { image: "support.svg", icon: "fa-solid fa-headset" }
+    };
+
+    const createTextElement = (tagName, className, text) => {
+      const element = document.createElement(tagName);
+      if (className) element.className = className;
+      element.textContent = text;
+      return element;
+    };
+
+    const createIcon = (className) => {
+      const icon = document.createElement("i");
+      icon.className = className;
+      icon.setAttribute("aria-hidden", "true");
+      return icon;
+    };
+
+    const normalizeText = (text) => text
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLocaleLowerCase("es");
+
+    const getPlanIcon = (name, fallback) => {
+      const normalizedName = normalizeText(name);
+      if (/chatbot|asistente|conversacion/.test(normalizedName)) return "fa-solid fa-comments";
+      if (/agente|inteligencia artificial|base de conocimiento/.test(normalizedName)) return "fa-solid fa-robot";
+      if (/reserva|cita|calendario/.test(normalizedName)) return "fa-solid fa-calendar-check";
+      if (/evento|inscripcion/.test(normalizedName)) return "fa-solid fa-calendar-days";
+      if (/inventario|producto/.test(normalizedName)) return "fa-solid fa-boxes-stacked";
+      if (/venta|pedido|tienda|comercial/.test(normalizedName)) return "fa-solid fa-bag-shopping";
+      if (/empleado|proveedor|administrativ|erp|facturacion|cartera|documental|indicadores/.test(normalizedName)) return "fa-solid fa-chart-column";
+      if (/automat|integracion|flujo|api/.test(normalizedName)) return "fa-solid fa-diagram-project";
+      if (/android|ios|movil|domicilio/.test(normalizedName)) return "fa-solid fa-mobile-screen-button";
+      if (/marketing|redes|publicacion|anuncio|banner|reel|seo|identidad|redaccion|perfil/.test(normalizedName)) return "fa-solid fa-bullhorn";
+      if (/mantenimiento|actualizacion|configuracion|soporte|tecnico/.test(normalizedName)) return "fa-solid fa-screwdriver-wrench";
+      if (/portafolio|galeria/.test(normalizedName)) return "fa-regular fa-images";
+      if (/web|pagina|sitio|software|aplicacion|plataforma|portal/.test(normalizedName)) return "fa-solid fa-window-maximize";
+      return categoryVisuals[fallback].icon;
+    };
+
+    catalog.forEach((category, index) => {
+      const visual = categoryVisuals[category.id];
+      const filterButton = createTextElement("button", "catalog-filter-button", "");
+      filterButton.type = "button";
+      filterButton.dataset.category = category.id;
+      filterButton.setAttribute("aria-pressed", "false");
+      filterButton.appendChild(createIcon(visual.icon));
+      filterButton.appendChild(createTextElement("span", "", category.title));
+      nav.appendChild(filterButton);
+
+      const section = document.createElement("section");
+      section.className = "catalog-category";
+      section.id = category.id;
+      section.dataset.category = category.id;
+      section.setAttribute("aria-labelledby", `${category.id}-title`);
+
+      const heading = document.createElement("div");
+      heading.className = "catalog-category-heading reveal";
+      const titleWrap = document.createElement("div");
+      titleWrap.className = "catalog-category-title-wrap";
+      const categoryIcon = createTextElement("span", "catalog-category-icon", "");
+      categoryIcon.appendChild(createIcon(visual.icon));
+      titleWrap.appendChild(categoryIcon);
+      const headingText = document.createElement("div");
+      const title = createTextElement("h2", "", `${index + 1}. ${category.title}`);
+      title.id = `${category.id}-title`;
+      headingText.appendChild(title);
+      if (category.note) headingText.appendChild(createTextElement("p", "", category.note));
+      titleWrap.appendChild(headingText);
+      heading.appendChild(titleWrap);
+      heading.appendChild(createTextElement("span", "catalog-count", `${category.items.length} servicios`));
+      section.appendChild(heading);
+
+      const grid = document.createElement("div");
+      grid.className = "catalog-grid";
+
+      category.items.forEach((item) => {
+        const card = document.createElement("article");
+        card.className = "catalog-card reveal";
+        card.dataset.category = category.id;
+        card.dataset.search = normalizeText([
+          category.title,
+          item.name,
+          item.price,
+          item.description,
+          item.note || "",
+          ...item.features
+        ].join(" "));
+
+        const artwork = document.createElement("div");
+        artwork.className = "catalog-card-art";
+        const image = document.createElement("img");
+        image.src = `assets/catalog/${visual.image}`;
+        image.alt = "";
+        image.width = 640;
+        image.height = 360;
+        image.loading = "lazy";
+        image.decoding = "async";
+        artwork.appendChild(image);
+        const planIcon = createTextElement("span", "catalog-card-icon", "");
+        planIcon.appendChild(createIcon(getPlanIcon(item.name, category.id)));
+        artwork.appendChild(planIcon);
+        card.appendChild(artwork);
+
+        card.appendChild(createTextElement("h3", "", item.name));
+        card.appendChild(createTextElement("span", "catalog-price", item.price));
+        card.appendChild(createTextElement("p", "catalog-description", item.description));
+
+        const details = document.createElement("details");
+        const summary = createTextElement("summary", "", "");
+        summary.setAttribute("aria-label", `Ver qué incluye: ${item.name}`);
+        const summaryIcon = createTextElement("span", "catalog-summary-icon", "");
+        summaryIcon.appendChild(createIcon("fa-solid fa-list-check"));
+        summary.appendChild(summaryIcon);
+        summary.appendChild(createTextElement("span", "", "Ver qué incluye"));
+        const summaryChevron = createTextElement("span", "catalog-summary-chevron", "");
+        summaryChevron.appendChild(createIcon("fa-solid fa-chevron-down"));
+        summary.appendChild(summaryChevron);
+        details.appendChild(summary);
+        const features = document.createElement("ul");
+        features.className = "catalog-features";
+        item.features.forEach((feature) => features.appendChild(createTextElement("li", "", feature)));
+        details.appendChild(features);
+        card.appendChild(details);
+
+        if (item.note) card.appendChild(createTextElement("p", "catalog-note", item.note));
+
+        const quoteLink = document.createElement("a");
+        quoteLink.className = "btn btn-plan catalog-quote";
+        quoteLink.href = `index.html#contacto`;
+        quoteLink.appendChild(createTextElement("span", "", "Solicitar cotización"));
+        quoteLink.appendChild(createIcon("fa-solid fa-arrow-right"));
+        card.appendChild(quoteLink);
+        grid.appendChild(card);
+      });
+
+      section.appendChild(grid);
+      content.appendChild(section);
+    });
+
+    const allButton = createTextElement("button", "catalog-filter-button", "");
+    allButton.type = "button";
+    allButton.dataset.category = "all";
+    allButton.setAttribute("aria-pressed", "true");
+    allButton.appendChild(createIcon("fa-solid fa-layer-group"));
+    allButton.appendChild(createTextElement("span", "", "Todos"));
+    nav.prepend(allButton);
+    document.getElementById("catalogTotal").textContent = catalog
+      .reduce((total, category) => total + category.items.length, 0)
+      .toString();
+
+    const terms = document.createElement("section");
+    terms.className = "catalog-terms reveal";
+    terms.setAttribute("aria-labelledby", "catalog-terms-title");
+    terms.appendChild(createTextElement("h2", "", "Condiciones comerciales generales"));
+    terms.querySelector("h2").id = "catalog-terms-title";
+    const termsList = document.createElement("ul");
+    [
+      "Todos los precios están expresados en pesos colombianos (COP).",
+      "Los valores indicados son precios iniciales y están sujetos al alcance del proyecto.",
+      "Las licencias, suscripciones, servicios de terceros y otros costos externos se cotizan por separado cuando apliquen.",
+      "La inversión publicitaria, así como la compra de dominio, hosting y certificados de pago, se cobra por separado cuando corresponda.",
+      "La facturación electrónica requiere cumplir las condiciones técnicas y normativas aplicables."
+    ].forEach((term) => termsList.appendChild(createTextElement("li", "", term)));
+    terms.appendChild(termsList);
+    content.appendChild(terms);
+
+    let activeCategory = "all";
+    const updateCatalog = () => {
+      const query = normalizeText(searchInput.value.trim());
+      let visibleCount = 0;
+
+      catalog.forEach((category) => {
+        const section = document.getElementById(category.id);
+        let visibleInCategory = 0;
+        section.querySelectorAll(".catalog-card").forEach((card) => {
+          const visible = (activeCategory === "all" || card.dataset.category === activeCategory)
+            && (!query || card.dataset.search.includes(query));
+          card.hidden = !visible;
+          if (visible) visibleInCategory += 1;
+        });
+        section.hidden = visibleInCategory === 0;
+        visibleCount += visibleInCategory;
+      });
+
+      resultCount.textContent = query || activeCategory !== "all"
+        ? `${visibleCount} ${visibleCount === 1 ? "servicio encontrado" : "servicios encontrados"}`
+        : `${visibleCount} servicios disponibles`;
+      noResults.hidden = visibleCount > 0;
+    };
+
+    const revealElements = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        root: null,
+        threshold: 0.12,
+        rootMargin: "0px 0px -40px 0px"
+      });
+
+      revealElements.forEach((element) => revealObserver.observe(element));
+    } else {
+      revealElements.forEach((element) => element.classList.add("revealed"));
+    }
+
+    nav.addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-category]");
+      if (!button) return;
+
+      activeCategory = button.dataset.category;
+      nav.querySelectorAll("button[data-category]").forEach((filter) => {
+        filter.setAttribute("aria-pressed", (filter === button).toString());
+      });
+      updateCatalog();
+      if (activeCategory !== "all") {
+        document.getElementById(activeCategory).scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+
+    searchInput.addEventListener("input", updateCatalog);
+    clearSearchButton.addEventListener("click", () => {
+      searchInput.value = "";
+      updateCatalog();
+      searchInput.focus();
+    });
+    searchInput.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        searchInput.value = "";
+        updateCatalog();
+      }
+    });
+    updateCatalog();
+  </script>
+</body>
+</html>

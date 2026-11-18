@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <defs><linearGradient id="g" x1="70" y1="33" x2="572" y2="346" gradientUnits="userSpaceOnUse"><stop stop-color="#0A547B"/><stop offset="1" stop-color="#0A1426"/></linearGradient><linearGradient id="bubble" x1="161" y1="90" x2="449" y2="271" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6"/><stop offset="1" stop-color="#2050A0"/></linearGradient></defs>
+  <rect width="640" height="360" rx="28" fill="url(#g)"/><circle cx="495" cy="77" r="112" fill="#35C9C0" fill-opacity=".14"/>
+  <rect x="80" y="75" width="327" height="205" rx="26" fill="#0D1C31" stroke="#57C8F5" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M109 75h269a29 29 0 0 1 29 29v15H80v-15a29 29 0 0 1 29-29Z" fill="#142741"/>
+  <circle cx="109" cy="97" r="5" fill="#FA5D50"/><circle cx="128" cy="97" r="5" fill="#F8C56A"/><circle cx="147" cy="97" r="5" fill="#55D6A0"/>
+  <rect x="110" y="143" width="205" height="52" rx="17" fill="#172A43"/><rect x="130" y="159" width="136" height="7" rx="3.5" fill="#AFC4E0"/><rect x="130" y="175" width="102" height="6" rx="3" fill="#7189A7"/>
+  <path d="M300 193h78a17 17 0 0 1 17 17v18a17 17 0 0 1-17 17h-9l-19 18v-18h-50a17 17 0 0 1-17-17v-18a17 17 0 0 1 17-17Z" fill="url(#bubble)"/>
+  <rect x="315" y="210" width="52" height="7" rx="3.5" fill="#E6F2FF"/><rect x="315" y="225" width="37" height="6" rx="3" fill="#BDD8FF"/>
+  <rect x="431" y="122" width="143" height="145" rx="29" fill="#FA5D50"/><rect x="441" y="132" width="123" height="125" rx="23" fill="#FF806E"/>
+  <path d="M466 178c0-17 13-30 30-30s30 13 30 30v28c0 17-13 30-30 30s-30-13-30-30v-28Z" fill="#FFF8F5"/>
+  <path d="M453 196v7a43 43 0 0 0 86 0v-7" stroke="#FFF8F5" stroke-width="8" stroke-linecap="round"/>
+  <path d="M466 174v-4m60 4v-4" stroke="#FA5D50" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="475" cy="183" r="4" fill="#FA5D50"/><circle cx="517" cy="183" r="4" fill="#FA5D50"/>
+  <path d="M496 237v7a13 13 0 0 1-13 13h-7" stroke="#FFF8F5" stroke-width="7" stroke-linecap="round"/>
+</svg>

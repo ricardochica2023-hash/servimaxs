@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <defs><linearGradient id="g" x1="78" y1="20" x2="556" y2="342" gradientUnits="userSpaceOnUse"><stop stop-color="#292A78"/><stop offset="1" stop-color="#07111F"/></linearGradient><linearGradient id="chip" x1="223" y1="95" x2="411" y2="272" gradientUnits="userSpaceOnUse"><stop stop-color="#4B83FF"/><stop offset="1" stop-color="#803EBA"/></linearGradient></defs>
+  <rect width="640" height="360" rx="28" fill="url(#g)"/><circle cx="327" cy="180" r="145" fill="#A254FF" fill-opacity=".13"/>
+  <path d="M131 118 218 150m-90 95 95-35m197-61 92-37m-95 122 90 38M320 65v36m0 158v36" stroke="#6588FF" stroke-opacity=".65" stroke-width="3" stroke-dasharray="7 8"/>
+  <circle cx="127" cy="115" r="15" fill="#FA5D50"/><circle cx="128" cy="245" r="13" fill="#35D6CA"/><circle cx="514" cy="116" r="15" fill="#F8C56A"/><circle cx="511" cy="244" r="13" fill="#FA5D50"/><circle cx="320" cy="58" r="12" fill="#A68CFF"/><circle cx="320" cy="306" r="12" fill="#6BDDB8"/>
+  <rect x="208" y="91" width="224" height="179" rx="34" fill="url(#chip)" stroke="#B6A8FF" stroke-opacity=".7" stroke-width="2"/>
+  <rect x="228" y="111" width="184" height="139" rx="23" fill="#0B1226" fill-opacity=".6"/>
+  <path d="M275 169c0-24 19-43 43-43s43 19 43 43v18c0 24-19 43-43 43s-43-19-43-43v-18Z" stroke="#D8D1FF" stroke-width="7"/>
+  <path d="M297 175h1m43 0h1" stroke="#72E6D0" stroke-width="9" stroke-linecap="round"/>
+  <path d="M304 197c8 7 24 7 32 0m-16-67v-13" stroke="#FA5D50" stroke-width="6" stroke-linecap="round"/>
+  <path d="M208 148h-14m14 34h-14m14 34h-14m238-68h14m-14 34h14m-14 34h14m-132-125V76m34 15V76m-34 194v14m34-14v14" stroke="#A8C2FF" stroke-width="5" stroke-linecap="round"/>
+</svg>
