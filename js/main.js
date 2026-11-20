@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const demoFeaturesList = document.getElementById('demoFeaturesList');
 
   // WhatsApp configuración
-  const PHONE_NUMBER = "573113754530"; // Número empresarial sugerido (Colombia)
+  const PHONE_NUMBER = "573215176420"; // Número empresarial sugerido (Colombia)
 
   /* ==========================================================================
      1. EFECTO DE NAVEGACIÓN STICKY AL HACER SCROLL
